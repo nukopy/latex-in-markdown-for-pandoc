@@ -30,5 +30,9 @@
         "path": "./syntaxes/pandoc-markdown-latex.tmLanguage.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.5",
+    "tsx": "^4.20.6"
   }
 }
