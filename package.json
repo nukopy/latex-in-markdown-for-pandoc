@@ -1,7 +1,7 @@
 {
   "name": "latex-highlight-in-pandoc-markdown",
   "displayName": "latex-highlight-in-pandoc-markdown",
-  "description": "LaTeX highlighting for Markdown front matter, inline math, and block math, ",
+  "description": "LaTeX highlighting for Markdown front matter, inline math, and block math in Pandoc-flavored documents.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.104.0"
@@ -10,6 +10,7 @@
     "Programming Languages"
   ],
   "scripts": {
+    "update-grammar": "tsx scripts/update-grammar.mts",
     "----- format, lint -----": "",
     "format": "biome format --write .",
     "lint": "biome lint --write .",
