@@ -1,0 +1,41 @@
+{
+  "scopeName": "markdown.frontmatter.latex.injection",
+  "injectionSelector": "L:text.html.markdown",
+  "patterns": [
+    {
+      "name": "meta.frontmatter.latex.markdown",
+      "begin": "^(---)\\s*$",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.front-matter.begin.markdown"
+        }
+      },
+      "end": "^(---|\\.\\.\\.)\\s*$",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.front-matter.end.markdown"
+        }
+      },
+      "patterns": [
+        {
+          "name": "meta.mapping.key.latex.preamble.yaml",
+          "match": "^(\\s*)(documentclass|header-includes|geometry|papersize|fontsize)\\s*:",
+          "captures": {
+            "2": {
+              "name": "support.type.property-name.yaml"
+            }
+          }
+        },
+        {
+          "name": "meta.frontmatter.latex.commands",
+          "match": "\\\\(usepackage|pagestyle|fancyhead|fancyfoot|newcommand)\\b",
+          "captures": {
+            "0": {
+              "name": "support.function.general.latex"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

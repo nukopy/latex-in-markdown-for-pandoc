@@ -1,0 +1,100 @@
+{
+  "scopeName": "markdown.latex.injection",
+  "injectionSelector": "L:text.html.markdown",
+  "patterns": [
+    {
+      "name": "meta.math.block.latex.markdown",
+      "begin": "(^|\\G)\\s*(\\$\\$)\\s*$",
+      "beginCaptures": {
+        "2": {
+          "name": "punctuation.definition.math.begin.latex"
+        }
+      },
+      "end": "^(\\s*)(\\$\\$)\\s*$",
+      "endCaptures": {
+        "2": {
+          "name": "punctuation.definition.math.end.latex"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#latex-inside"
+        }
+      ]
+    },
+    {
+      "name": "meta.math.block.latex.markdown.bracket",
+      "begin": "\\\\\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.math.begin.latex"
+        }
+      },
+      "end": "\\\\\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.math.end.latex"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#latex-inside"
+        }
+      ]
+    },
+    {
+      "name": "meta.math.inline.latex.markdown",
+      "begin": "(?<!\\\\)(\\$)(?!\\$)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.math.begin.latex"
+        }
+      },
+      "end": "(?<!\\\\)(\\$)(?!\\$)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.math.end.latex"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#latex-inside"
+        }
+      ]
+    },
+    {
+      "name": "meta.math.inline.latex.markdown.paren",
+      "begin": "\\\\\\(",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.math.begin.latex"
+        }
+      },
+      "end": "\\\\\\)",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.math.end.latex"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#latex-inside"
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "latex-inside": {
+      "patterns": [
+        {
+          "name": "support.function.general.latex",
+          "match": "\\\\[A-Za-z@]+"
+        },
+        {
+          "name": "constant.character.escape.latex",
+          "match": "\\\\[{}$%&#_^~]"
+        }
+      ]
+    }
+  }
+}

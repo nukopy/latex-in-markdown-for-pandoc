@@ -9,6 +9,9 @@
   "categories": [
     "Programming Languages"
   ],
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
   "scripts": {
     "----- format, lint -----": "",
     "format": "biome format --write .",
@@ -19,24 +22,20 @@
     "test": "echo \"No tests yet\""
   },
   "contributes": {
-    "languages": [
-      {
-        "id": "pandoc-markdown-latex",
-        "aliases": [
-          "Pandoc Markdown (LaTeX)",
-          "pandoc-markdown-latex"
-        ],
-        "extensions": [
-          ".md"
-        ],
-        "configuration": "./language-configuration.json"
-      }
-    ],
     "grammars": [
       {
-        "language": "pandoc-markdown-latex",
-        "scopeName": "text.pandoc.markdown",
-        "path": "./syntaxes/pandoc-markdown-latex.tmLanguage.json"
+        "scopeName": "markdown.latex.injection",
+        "path": "./syntaxes/markdown-latex-injection.tmLanguage.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
+      },
+      {
+        "scopeName": "markdown.frontmatter.latex.injection",
+        "path": "./syntaxes/frontmatter-latex-injection.tmLanguage.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
       }
     ]
   },
