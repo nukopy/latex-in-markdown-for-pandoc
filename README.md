@@ -41,3 +41,10 @@ Despite this setup, there is limited tooling inside VSCode that understands Pand
 - Enumerate LaTeX patterns that require highlighting.
 - Review VSCode language configuration and TextMate grammar options.
 - Prepare test documents (including `examples/example_resume.md`) for validation.
+
+## Reference Documentation
+
+- [Pandoc User's Guide — YAML metadata blocks and `header-includes`](https://pandoc.org/MANUAL.html#metadata-blocks)
+- [Pandoc User's Guide — Variables](https://pandoc.org/MANUAL.html#variables)
+- [Pandoc User's Guide — raw attribute extension (`{=latex}`)](https://pandoc.org/MANUAL.html#extension-raw_attribute)
+- [Visual Studio Code Extension API — Syntax Highlight Guide (Injection Grammars)](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#injection-grammars)
