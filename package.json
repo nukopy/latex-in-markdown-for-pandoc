@@ -10,7 +10,6 @@
     "Programming Languages"
   ],
   "scripts": {
-    "update-grammar": "tsx scripts/update-grammar.mts",
     "----- format, lint -----": "",
     "format": "biome format --write .",
     "lint": "biome lint --write .",
