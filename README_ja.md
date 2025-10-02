@@ -25,9 +25,9 @@ Pandoc を利用して Markdown から PDF や LaTeX 文書を生成する際に
 
 ## ロードマップ
 
-1. Markdown (frontmatter・本文) 中の LaTeX 記法ハイライト対応
-2. Markdown 内 LaTeX 記法の LSP サポート (ホバーでのドキュメント表示、定義ジャンプ)
-3. frontmatter に記述された YAML プリアンブルの LSP サポート (ホバーでのドキュメント表示、定義ジャンプ)
+- [ ] 1. Markdown (frontmatter・本文) 中の LaTeX 記法ハイライト対応
+- [ ] 2. Markdown 内 LaTeX 記法の LSP サポート (ホバーでのドキュメント表示、定義ジャンプ)
+- [ ] 3. frontmatter に記述された YAML プリアンブルの LSP サポート (ホバーでのドキュメント表示、定義ジャンプ)
 
 ## 想定する開発アウトライン
 

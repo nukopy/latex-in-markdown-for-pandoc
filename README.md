@@ -25,9 +25,9 @@ Despite this setup, there is limited tooling inside VSCode that understands Pand
 
 ## Roadmap
 
-1. Highlight LaTeX syntax in Markdown (frontmatter and body).
-2. Deliver LSP capabilities for LaTeX within Markdown (hover documentation and go-to-definition).
-3. Extend LSP support to LaTeX preamble content declared in YAML frontmatter (hover documentation and go-to-definition).
+- [ ] 1. Highlight LaTeX syntax in Markdown (frontmatter and body).
+- [ ] 2. Deliver LSP capabilities for LaTeX within Markdown (hover documentation and go-to-definition).
+- [ ] 3. Extend LSP support to LaTeX preamble content declared in YAML frontmatter (hover documentation and go-to-definition).
 
 ## Development Outline
 
