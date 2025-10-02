@@ -1,6 +1,7 @@
 # Variables
 MARKDOWNLINT ?= npx markdownlint-cli2
-MARKDOWN_SOURCES ?= "./**/*.md"
+MARKDOWN_SOURCES ?= "**/*.md"
+IGNORE_SOURCES ?= "!**/node_modules/**"
 
 # ------------------------------------------------------------
 # linting, formatting
@@ -9,10 +10,10 @@ MARKDOWN_SOURCES ?= "./**/*.md"
 .PHONY: lint-md fmt-md
 
 lint-md:
-	$(MARKDOWNLINT) $(MARKDOWN_SOURCES)
+	$(MARKDOWNLINT) $(MARKDOWN_SOURCES) $(IGNORE_SOURCES)
 
 fmt-md:
-	$(MARKDOWNLINT) --fix $(MARKDOWN_SOURCES)
+	$(MARKDOWNLINT) --fix $(MARKDOWN_SOURCES) $(IGNORE_SOURCES)
 
 # ------------------------------------------------------------
 # pandoc build for E2E testing
