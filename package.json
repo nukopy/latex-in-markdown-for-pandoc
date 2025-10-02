@@ -9,6 +9,15 @@
   "categories": [
     "Programming Languages"
   ],
+  "scripts": {
+    "----- format, lint -----": "",
+    "format": "biome format --write .",
+    "lint": "biome lint --write .",
+    "check": "biome check --write",
+    "ci": "biome ci",
+    "----- test -----": "",
+    "test": "echo \"No tests yet\""
+  },
   "contributes": {
     "languages": [
       {
