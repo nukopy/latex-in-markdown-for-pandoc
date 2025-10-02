@@ -1,0 +1,34 @@
+{
+  "name": "latex-highlight-in-pandoc-markdown",
+  "displayName": "latex-highlight-in-pandoc-markdown",
+  "description": "LaTeX highlighting for Markdown front matter, inline math, and block math, ",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.104.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pandoc-markdown-latex",
+        "aliases": [
+          "Pandoc Markdown (LaTeX)",
+          "pandoc-markdown-latex"
+        ],
+        "extensions": [
+          ".md"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pandoc-markdown-latex",
+        "scopeName": "text.pandoc.markdown",
+        "path": "./syntaxes/pandoc-markdown-latex.tmLanguage.json"
+      }
+    ]
+  }
+}
