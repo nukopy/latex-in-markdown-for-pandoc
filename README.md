@@ -88,6 +88,81 @@ I built this extension while writing my resume with Pandoc.
 
 I needed proper LaTeX syntax highlighting inside Markdown, both in YAML frontmatter and the body.
 
+## Development
+
+### Requirements
+
+- Node.js v22.16.x
+- Visual Studio Code v1.99.x or later
+- (optional) Cursor 1.7.x or later
+
+### Setup
+
+```sh
+git clone git@github.com:nukopy/latex-in-markdown-for-pandoc.git
+cd latex-in-markdown-for-pandoc
+pnpm i
+```
+
+Now, you can start developing the extension.
+
+### Build
+
+```sh
+pnpm run build
+```
+
+If successful, the extension package `dist/latex-in-markdown-for-pandoc-<version>.vsix` is created.
+
+### Install locally for testing
+
+Execute command `Extensions: Install from VSIX...` in VS Code (or Cursor) and select the file `dist/latex-in-markdown-for-pandoc-<version>.vsix`.
+
+### Prepare for publishing
+
+1. Create [Azure DevOps organization](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/create-organization?view=azure-devops)
+2. Create [Personal Access Token](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows)
+   - Copy the Personal Access Token for next step
+3. Create a [publisher](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#create-a-publisher)
+
+ref: [Publishing Extensions | Visual Studio Code](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
+
+### Publish to VS Code Marketplace
+
+- Login to VS Code Marketplace
+
+```sh
+pnpm run login -- <publisher ID>
+# input Personal Access Token
+```
+
+- Edit version in `package.json`
+
+```diff json
+{
+-  "version": "0.1.0"
++  "version": "0.1.1"
+}
+```
+
+- Pre-release
+
+```sh
+pnpm run publish:pre
+```
+
+- Release
+
+```sh
+pnpm run publish
+```
+
+- Unpublish
+
+```sh
+pnpm run unpublish
+```
+
 ## References
 
 Thanks to the following references for inspiration:
