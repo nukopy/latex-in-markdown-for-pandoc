@@ -1,50 +1,44 @@
-# LaTeX in Markdown for Pandoc
+# LaTeX Highlight in Markdown for Pandoc
 
-## Project Overview
+Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown documents processed with [Pandoc](https://pandoc.org/index.html).
 
-We are building a VSCode extension that helps authors manage LaTeX code embedded in Markdown when publishing documents with Pandoc. The extension targets LaTeX fragments that appear both in YAML frontmatter and in the Markdown body, streamlining the writing flow from Markdown to PDF or native LaTeX outputs.
+## Features
 
-## Background
+TODO: frontmatter にハイライトが当たっている様子のスクショ
 
-- Pandoc projects often keep LaTeX preambles in Markdown frontmatter (e.g., `documentclass: extarticle`).
-- Inline and block-level LaTeX syntax coexists with regular Markdown prose.
-- Pandoc-specific features such as YAML metadata blocks, fenced code attributes, and filters add extra structure to parse.
+TODO: body にハイライトが当たっている様子のスクショ
 
-Despite this setup, there is limited tooling inside VSCode that understands Pandoc-flavored Markdown and offers dedicated LaTeX authoring assistance.
+## Quick start
 
-## Target Documents
+### Install
 
-- Pandoc-compatible Markdown files that contain YAML frontmatter and Markdown content.
-- Example: `examples/example_resume.md` (resume template).
+TODO: VS Code 拡張のインストール
 
-## Scope
+### Usage
 
-- Provide syntax highlighting for LaTeX snippets when opening Markdown files in VSCode.
-- Design the extension so it integrates safely with existing Pandoc build pipelines (scripts and CI).
-- Keep broader Pandoc Markdown documents in mind for future extension and reuse.
+TODO: snippets を使う
 
 ## Roadmap
 
-- [ ] 1. Highlight LaTeX syntax in Markdown (frontmatter and body).
-- [ ] 2. Deliver LSP capabilities for LaTeX within Markdown (hover documentation and go-to-definition).
-- [ ] 3. Extend LSP support to LaTeX preamble content declared in YAML frontmatter (hover documentation and go-to-definition).
+- [x] 1. Highlight LaTeX syntax in Markdown
+  - [x] LaTeX in Markdown frontmatter written in YAML
+  - [x] LaTeX in Markdown body
+- [ ] 2. Extend LSP support to LaTeX code in Markdown (hover documentation and go-to-definition).
+  - [ ] LaTeX in Markdown frontmatter written in YAML
+  - [ ] LaTeX in Markdown body
 
-## Development Outline
+## Motivation
 
-- Scaffold the VSCode extension (TypeScript + VS Code API).
-- Evaluate parsers/tokenizers that can recognize Markdown, LaTeX, and Pandoc constructs in a unified pass.
-- Investigate integration points with existing LaTeX LSP servers (e.g., texlab) and identify required customizations.
-- Plan user validation to measure productivity gains during Pandoc document authoring.
+I built this extension while writing my resume with Pandoc.
 
-## Next Actions
+I needed proper LaTeX syntax highlighting inside Markdown, both in YAML frontmatter and the body.
 
-- Enumerate LaTeX patterns that require highlighting.
-- Review VSCode language configuration and TextMate grammar options.
-- Prepare test documents (including `examples/example_resume.md`) for validation.
+## References
 
-## Reference Documentation
+Thanks to the following references for inspiration:
 
 - [Pandoc User's Guide — YAML metadata blocks and `header-includes`](https://pandoc.org/MANUAL.html#metadata-blocks)
 - [Pandoc User's Guide — Variables](https://pandoc.org/MANUAL.html#variables)
 - [Pandoc User's Guide — raw attribute extension (`{=latex}`)](https://pandoc.org/MANUAL.html#extension-raw_attribute)
 - [Visual Studio Code Extension API — Syntax Highlight Guide (Injection Grammars)](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#injection-grammars)
+- [vscode-latex-basics/markdown-latex-combined.tmLanguage.json](https://github.com/jlelong/vscode-latex-basics/blob/main/syntaxes/markdown-latex-combined.tmLanguage.json)
