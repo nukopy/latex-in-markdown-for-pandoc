@@ -1,0 +1,13 @@
+{
+    "LaTeX_in_Markdown_for_Pandoc_frontmatter_template": {
+        "prefix": "pandoc/latex template",
+        "body": [
+            "---",
+            "# ----- pandoc-latex-begin -----",
+            "${0}",
+            "# ----- pandoc-latex-end -----",
+            "---"
+        ],
+        "description": "Frontmatter template for LaTeX in Markdown for Pandoc"
+    }
+}

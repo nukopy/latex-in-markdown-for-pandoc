@@ -41,6 +41,16 @@
           "text.html.markdown"
         ]
       }
+    ],
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./snippets/yaml.json"
+      }
     ]
   },
   "devDependencies": {
