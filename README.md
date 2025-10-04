@@ -11,10 +11,7 @@ TODO: body にハイライトが当たっている様子のスクショ
 ## Requirements
 
 - Visual Studio Code v1.99.x or later
-
-or
-
-- Cursor 1.7.x or later
+- (optional) Cursor 1.7.x or later
 
 ## Quick start
 
