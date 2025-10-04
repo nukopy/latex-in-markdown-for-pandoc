@@ -4,7 +4,7 @@
   "description": "LaTeX highlighting for Markdown front matter, inline math, and block math in Pandoc-flavored documents.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.104.0"
+    "vscode": "^1.99.0"
   },
   "categories": [
     "Programming Languages"
