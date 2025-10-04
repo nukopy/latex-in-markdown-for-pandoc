@@ -23,13 +23,52 @@
             },
             "patterns": [
                 {
-                    "include": "text.tex.latex"
+                    "include": "#pandoc-yaml-block-scalars"
                 },
                 {
                     "include": "#pandoc-yaml-keywords"
                 },
                 {
+                    "include": "text.tex.latex"
+                },
+                {
                     "include": "source.yaml"
+                }
+            ]
+        },
+        "pandoc-yaml-block-scalars": {
+            "patterns": [
+                {
+                    "name": "meta.embedded.block-scalar.yaml",
+                    "comment": "Detects YAML list items that begin a block scalar (| or >) and treats their contents as LaTeX.",
+                    "begin": "^(\\s*)(-\\s*)(\\|[+-]?|>[+-]?)(?:\\s+#.*)?\\s*$",
+                    "beginCaptures": {
+                        "1": {
+                            "name": "meta.indentation.yaml",
+                            "comment": "Leading indentation (spaces or tabs)"
+                        },
+                        "2": {
+                            "name": "punctuation.definition.list-item.yaml",
+                            "comment": "Dash (-) of a YAML list item and its following space"
+                        },
+                        "3": {
+                            "name": "punctuation.definition.block-scalar.yaml",
+                            "comment": "Block scalar indicator (| or >) including optional + / - chomping indicators"
+                        }
+                    },
+                    "while": "^(?:(?=\\1\\s{2,})|\\s*$)",
+                    "whileCaptures": {
+                        "0": {
+                            "name": "meta.embedded.block-scalar.line.yaml",
+                            "comment": "Lines inside the block scalar body (same indent + at least 2 more spaces)"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "text.tex.latex",
+                            "comment": "Delegate parsing of block content to the LaTeX grammar if available"
+                        }
+                    ]
                 }
             ]
         },
