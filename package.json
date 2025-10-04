@@ -21,15 +21,8 @@
   "contributes": {
     "grammars": [
       {
-        "scopeName": "markdown.latex.injection",
-        "path": "./syntaxes/markdown-latex-injection.tmLanguage.json",
-        "injectTo": [
-          "text.html.markdown"
-        ]
-      },
-      {
-        "scopeName": "markdown.frontmatter.latex.injection",
-        "path": "./syntaxes/frontmatter-latex-injection.tmLanguage.json",
+        "scopeName": "pandoc-latex-injection-frontmatter",
+        "path": "./syntaxes/pandoc-latex-injection-frontmatter.tmLanguage.json",
         "injectTo": [
           "text.html.markdown"
         ]
