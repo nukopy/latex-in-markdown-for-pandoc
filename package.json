@@ -23,7 +23,11 @@
     "----- test -----": "",
     "test": "echo \"No tests yet\"",
     "----- release -----": "",
-    "build": "vsce package -o dist/"
+    "build": "vsce package -o dist/",
+    "login": "vsce login",
+    "publish:pre": "vsce publish --pre-release",
+    "publish": "vsce publish",
+    "unpublish": "vsce unpublish"
   },
   "contributes": {
     "grammars": [
