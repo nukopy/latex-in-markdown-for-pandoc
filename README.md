@@ -1,5 +1,7 @@
 # LaTeX in Markdown for Pandoc
 
+TODO: badges: version, downloads, installs, license
+
 Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown documents processed with [Pandoc](https://pandoc.org/index.html).
 
 ## Features
