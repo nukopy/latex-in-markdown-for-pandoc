@@ -147,12 +147,6 @@ pnpm run login -- <publisher ID>
 }
 ```
 
-- Pre-release
-
-```sh
-pnpm run publish:pre
-```
-
 - Release
 
 ```sh

@@ -35,7 +35,6 @@
     "----- release -----": "",
     "build": "vsce package -o dist/",
     "login": "vsce login",
-    "publish:pre": "vsce publish --pre-release",
     "publish": "vsce publish",
     "unpublish": "vsce unpublish"
   },
