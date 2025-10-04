@@ -23,9 +23,14 @@ This extension is available for free in the [Visual Studio Code Marketplace](htt
 
 ### Usage
 
-In this extension, syntax highlight is enabled by adding the following 2 lines of comments `# ----- pandoc-latex-begin -----` and `# ----- pandoc-latex-end -----` in the frontmatter of a Pandoc-flavoured Markdown file.
+In this extension, syntax highlight is enabled by adding the following 2 lines of comments shown below in the frontmatter of a Pandoc-flavoured Markdown file.
 
-After adding, the range between these comments in frontmatter is highlighted as LaTeX code. **This is a necessary step to enable syntax highlight**.
+- `# ----- pandoc-latex-begin -----`
+- `# ----- pandoc-latex-end -----`
+
+After adding these comments, the range between them in frontmatter is highlighted as LaTeX code. **This is a necessary step to enable syntax highlight**.
+
+Your Markdown frontmatter should look like the following:
 
 ```yaml
 ---
