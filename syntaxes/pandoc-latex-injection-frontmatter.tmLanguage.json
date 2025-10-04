@@ -1,0 +1,46 @@
+{
+    "scopeName": "pandoc-latex-injection-frontmatter",
+    "injectionSelector": "L:meta.embedded.block.frontmatter",
+    "patterns": [
+        {
+            "include": "#latex-injection"
+        }
+    ],
+    "repository": {
+        "latex-injection": {
+            "name": "meta.embedded.block.frontmatter.pandoc-latex-injection",
+            "begin": "(# ----- pandoc-latex-begin -----)",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.definition.comment.begin.pandoc-latex-injection"
+                }
+            },
+            "end": "(# ----- pandoc-latex-end -----)",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.comment.end.pandoc-latex-injection"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "text.tex.latex"
+                },
+                {
+                    "include": "#keyword-test"
+                }
+            ]
+        },
+        "------- test -------": "",
+        "keyword-test": {
+            "patterns": [
+                {
+                    "include": "#nukopy"
+                }
+            ]
+        },
+        "nukopy": {
+            "name": "keyword.nukopy.nukopy",
+            "match": "\\bnukopy\\b"
+        }
+    }
+}
