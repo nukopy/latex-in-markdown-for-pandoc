@@ -1,16 +1,10 @@
 ---
+title: title
+hello: world
+
 # ----- pandoc-latex-begin -----
 title: title
 author: nukopy
-hello: "hello"
-
-"hello"
-
-"author"
-
-hello
-
-world
 
 header-include:
   - \usepackage{amsmath}
@@ -20,7 +14,6 @@ header-include:
   - \usepackage{amsbsy}
   - \usepackage{amsthm}
   - \usepackage{amscd}
-
 # ----- pandoc-latex-end -----
 ---
 
@@ -60,3 +53,7 @@ fmt.Println("Hello, World!")
 hello
 
 ## hello
+
+```yml
+hello: "hello"
+```

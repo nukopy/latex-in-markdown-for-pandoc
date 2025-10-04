@@ -1,4 +1,5 @@
 ---
+# ----- pandoc-latex-begin -----
 # meta
 title: Simple
 
@@ -11,7 +12,7 @@ documentclass: extarticle
 # ------------------------------------------------------------
 # page settings
 # ------------------------------------------------------------
-hogehoge
+
 # paper size
 papersize: a4
 
@@ -32,6 +33,8 @@ pagestyle: empty
 # font size
 # ここを書き換えたら \basefontsize の値も書き換える
 fontsize: 10pt
+# pandoc に定義されていないキーワード
+fontsizes: 10pt
 
 # font family
 mainfont: "Hack Nerd Font Mono"
@@ -159,6 +162,8 @@ header-includes:
   # link underline
   - |
     \AtBeginDocument{\let\originalhref\href\renewcommand{\href}[2]{\originalhref{#1}{\uline{#2}}}}
+
+# ----- pandoc-latex-begin -----
 ---
 
 $\LaTeX$
