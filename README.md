@@ -18,13 +18,63 @@ or
 
 ## Quick start
 
-### Install
+### Installation
 
 TODO: VS Code 拡張のインストール
 
 ### Usage
 
-TODO: snippets を使う
+In this extension, syntax highlight is enabled by adding the following 2 lines of comments `# ----- pandoc-latex-begin -----` and `# ----- pandoc-latex-end -----` in the frontmatter of a Pandoc-flavoured Markdown file.
+
+After adding, the range between these comments in frontmatter is highlighted as LaTeX code. **This is a necessary step to enable syntax highlight**.
+
+```yaml
+---
+# ----- pandoc-latex-begin -----
+
+# highlighted as LaTeX code!!!
+
+# ----- pandoc-latex-end -----
+--- # <- punctuation to end frontmatter
+```
+
+Example of Markdown frontmatter that enables syntax highlight with this extension is the following. If correctly set up, LaTeX code, such as `\usepackage{graphicx}`, is highlighted.
+
+```yaml
+---
+# ----- pandoc-latex-begin -----
+
+documentclass: extarticle
+papersize: a4
+pagestyle: empty
+
+geometry:
+  - top=17.5mm
+  - bottom=20mm
+  - left=20mm
+  - right=20mm
+
+fontsize: 10pt
+mainfont: "Hack Nerd Font Mono"
+sansfont: "Hack Nerd Font Mono"
+CJKmainfont: "Hiragino Sans W3"
+monofont: "Hack Nerd Font Mono"
+
+header-includes:
+  # highlighted as LaTeX code in your editor!
+  - \usepackage{xcolor}
+  - \usepackage{graphicx}
+  - \usepackage{titlesec}
+  - \usepackage{setspace}
+  - \usepackage{fontawesome5}
+  - \usepackage{xfp}
+  - \usepackage[normalem]{ulem}
+
+# ----- pandoc-latex-end -----
+---
+```
+
+TODO: snippets の説明 with gif
 
 ## Roadmap
 
