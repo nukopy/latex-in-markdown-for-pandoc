@@ -54,7 +54,7 @@ build-tex:
 	mkdir -p "$(OUTPUT_DIR_TEX)"; \
 	OUTPUT_PATH="$(OUTPUT_DIR_TEX)/$(basename $(notdir $(FILE))).tex"; \
 	echo "Generating $$OUTPUT_PATH"; \
-	pandoc "$(FILE)" -t latex \
+	pandoc "$(FILE)" -s -t latex \
 	  -o "$$OUTPUT_PATH" && \
 	echo "Wrote $$OUTPUT_PATH"
 
