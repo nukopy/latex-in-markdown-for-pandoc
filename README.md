@@ -1,4 +1,4 @@
-# LaTeX Highlight in Markdown for Pandoc
+# LaTeX in Markdown for Pandoc
 
 Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown documents processed with [Pandoc](https://pandoc.org/index.html).
 
