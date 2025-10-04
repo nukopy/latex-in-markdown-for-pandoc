@@ -2,13 +2,22 @@
   "name": "latex-in-markdown-for-pandoc",
   "displayName": "LaTeX in Markdown for Pandoc",
   "publisher": "nukopy",
-  "description": "Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown documents processed with [Pandoc](https://pandoc.org/index.html).",
+  "description": "Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown documents processed with Pandoc",
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.99.0"
   },
   "categories": [
     "Programming Languages"
+  ],
+  "keywords": [
+    "LaTeX",
+    "Markdown",
+    "Pandoc",
+    "markdown",
+    "latex",
+    "tex",
+    "pandoc"
   ],
   "repository": {
     "type": "git",
