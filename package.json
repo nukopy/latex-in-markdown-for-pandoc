@@ -9,9 +9,6 @@
   "categories": [
     "Programming Languages"
   ],
-  "activationEvents": [
-    "onLanguage:markdown"
-  ],
   "scripts": {
     "----- format, lint -----": "",
     "format": "biome format --write .",
