@@ -44,7 +44,7 @@ build-pdf:
 
 build-tex:
 	@if [ -z "$(FILE)" ]; then \
-		echo "Usage: make tex FILE=path/to/file.md"; \
+		echo "Usage: make build-tex FILE=path/to/file.md"; \
 		exit 1; \
 	fi
 	@if [ ! -f "$(FILE)" ]; then \
@@ -59,3 +59,32 @@ build-tex:
 	echo "Wrote $$OUTPUT_PATH"
 
 build: build-pdf build-tex
+
+# ------------------------------------------------------------
+# misc
+# ------------------------------------------------------------
+
+OUTPUT_DIR_GIF ?= ./assets
+
+# usage: make mov-to-gif FILE="assets/my-movie.mov"
+# ref: https://qiita.com/yusuga/items/ba7b5c2cac3f2928f040#%E6%89%8B%E8%BB%BD%E3%81%AB%E7%B6%BA%E9%BA%97%E3%81%AAgif%E3%82%92%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84
+mov-to-gif:
+	@if [ -z "$(FILE)" ]; then \
+		echo "Usage: make mov-to-gif FILE=path/to/file.mov"; \
+		exit 1; \
+	fi
+	@if [ ! -f "$(FILE)" ]; then \
+		echo "Input not found: $(FILE)"; \
+		exit 1; \
+	fi
+
+	# create dir
+	mkdir -p "$(OUTPUT_DIR_GIF)"
+
+	# get output path
+	OUTPUT_PATH="$(OUTPUT_DIR_GIF)/$(basename $(notdir $(FILE))).gif"; \
+	echo "Generating $$OUTPUT_PATH"; \
+	ffmpeg -i $(FILE) \
+		-filter_complex "[0:v] fps=10,scale=640:-1,split [a][b];[a] palettegen [p];[b][p] paletteuse" \
+		$$OUTPUT_PATH
+	echo "Wrote $$OUTPUT_PATH"
