@@ -130,8 +130,88 @@ You can add frontmatter comments that trigger the highlighting by typing `pandoc
 
 ## Showcase
 
-TODO: examples の .md, .tex, .pdf のセットを 2 つ。
-TODO: single columns の resume と multi columns の resume。
+In this section, we show some examples of LaTeX in Markdown for Pandoc.
+
+As appendix, we show how to build PDF and LaTeX files from Markdown files with Pandoc.
+
+### Overview
+
+Examples contain list of files as follows:
+
+- `main.md`: The main Markdown file
+- `main.tex`: The output LaTeX file (intermediate file)
+- `main.pdf`: The output PDF file (final output)
+
+Now, we show examples:
+
+- [Resume with single column layout](./examples/showcase/resume_single_column)
+  - This example shows how to write a resume with a single column layout
+- [Statistics - the proof of the normal distribution](./examples/showcase/stats_proof_normal_distribution)
+  - This example shows how to write a statistics topic with LaTeX
+  - This is written in Japanese
+
+### Appendix: How to build examples in showcase
+
+This appendix section shows how to build PDF and LaTeX files from Markdown files with Pandoc using the "Resume with single column layout" example in showcase.
+
+> [!NOTE]
+> This section is specifically for macOS users.
+>
+> While it may be possible to build on other platforms, please be aware of potential differences.
+
+#### Environment
+
+- macOS Sonoma 14.7
+- Pandoc 3.8
+- [MacTex](https://www.tug.org/mactex/) 2025.0308
+  - XeLaTeX 3.141592653-2.6-0.999997 (TeX Live 2025)
+
+#### Install dependencies
+
+Install pandoc and MacTex:
+
+```sh
+# Install pandoc
+brew install pandoc
+
+# Install MacTex (this takes 10-20 minutes on slow internet)
+brew install --cask mactex
+```
+
+Check versions:
+
+```sh
+pandoc --version
+# pandoc 3.8
+xelatex --version
+# XeTeX 3.141592653-2.6-0.999997 (TeX Live 2025)
+```
+
+In this example, `xelatex` is used as PDF engine.
+
+#### Clone repository
+
+```sh
+git clone git@github.com:nukopy/latex-in-markdown-for-pandoc.git
+```
+
+#### Build PDF and LaTeX files from Pandoc-flavoured Markdown
+
+```sh
+cd latex-in-markdown-for-pandoc/examples/showcase/resume_single_column
+
+# build PDF file
+pandoc main.md --pdf-engine=xelatex -o main.pdf
+file main.pdf
+
+# build LaTeX file
+pandoc main.md -s -t latex -o main.tex
+file main.pdf
+```
+
+Now, you can see the `main.pdf` file with a PDF viewer and the `main.tex` file with your favorite text editor.
+
+Let's try to use this extension to see LaTeX syntax highlight in the `main.md` file!
 
 ## Roadmap
 
