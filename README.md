@@ -163,7 +163,7 @@ This appendix section shows how to build PDF and LaTeX files from Markdown files
 
 - macOS Sonoma 14.7
 - Pandoc 3.8
-- [MacTex](https://www.tug.org/mactex/) 2025.0308
+- [MacTeX](https://www.tug.org/mactex/) 2025.0308
   - XeLaTeX 3.141592653-2.6-0.999997 (TeX Live 2025)
 
 #### Install dependencies
