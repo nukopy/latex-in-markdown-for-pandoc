@@ -113,9 +113,28 @@ header-includes:
 
 ### Utility snippets
 
-This extension provides utility snippets to easily add the comments above.
+This extension provides utility snippets to easily add the comments mentioned above.
 
-TODO: snippets の説明 with gif
+#### for new empty Markdown file
+
+You can add frontmatter template by typing `pandoc template` like below:
+
+![snippets: pandoc template](./assets/snippets-pandoc-template.gif)
+
+#### for existing frontmatter
+
+You can add frontmatter comments that trigger the highlighting by typing `pandoc begin` and `pandoc end`. **You must type these inside the frontmatter block.**
+
+![snippets: pandoc begin, end](./assets/snippets-pandoc-begin-end.gif)
+
+> [!WARNING]
+> You might think LaTeX code will still be highlighted even if you skip adding the end comment `# ----- pandoc-latex-end -----` to the frontmatter.
+> However, this extension depends on those comments to delimit the scope it highlights, so omitting them can lead to unexpected errors. Make sure you add the `# ----- pandoc-latex-end -----` comment to the end of the frontmatter correctly.
+
+## Showcase
+
+TODO: examples の .md, .tex, .pdf のセットを 2 つ。
+TODO: single columns の resume と multi columns の resume。
 
 ## Roadmap
 
