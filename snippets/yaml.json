@@ -2,7 +2,8 @@
     "LaTeX_in_Markdown_for_Pandoc_frontmatter_begin": {
         "prefix": "pandoc/latex begin",
         "body": [
-            "# ----- pandoc-latex-begin -----"
+            "# ----- pandoc-latex-begin -----",
+            ""
         ],
         "description": "Begin of LaTeX in Markdown for Pandoc"
     },

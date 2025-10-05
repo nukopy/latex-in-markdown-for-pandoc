@@ -4,7 +4,9 @@
         "body": [
             "---",
             "# ----- pandoc-latex-begin -----",
+            "",
             "${0}",
+            "",
             "# ----- pandoc-latex-end -----",
             "---"
         ],
