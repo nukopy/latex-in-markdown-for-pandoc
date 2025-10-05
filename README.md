@@ -27,9 +27,7 @@ Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown d
 
 ## Features
 
-LaTeX code in both the Markdown frontmatter and body is highlighted with this extension.
-
-**You can keep using your favorite theme.**
+LaTeX code in both the Markdown frontmatter and body is highlighted with this extension. **You can keep using your favorite theme.**
 
 ### Frontmatter highlight
 
