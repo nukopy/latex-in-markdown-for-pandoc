@@ -57,9 +57,7 @@ Body highlight in light theme:
 
 This extension is available for free in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc).
 
-If you're Cursor user, you cannot install this extension from the marketplace now (planned to be supported in the future).
-
-However, you can install it from `.vsix` file. See the section [Install locally](#install-locally) for details.
+If you're Cursor user, you cannot install this extension from the marketplace now (planned to be supported in the future). However, you can install it from `.vsix` file. See the section [Install locally](#install-locally) for details.
 
 ## Usage
 
@@ -132,17 +130,19 @@ You can add frontmatter comments that trigger the highlighting by typing `pandoc
 
 In this section, we show some examples of LaTeX in Markdown for Pandoc.
 
-As appendix, we show how to build PDF and LaTeX files from Markdown files with Pandoc.
+As appendix, we show how to build PDF and LaTeX files from Markdown files with Pandoc, too.
 
 ### Overview
 
-Examples contain list of files as follows:
+Each example contains list of files as follows:
 
 - `main.md`: The main Markdown file
 - `main.tex`: The output LaTeX file (intermediate file)
 - `main.pdf`: The output PDF file (final output)
 
-Now, we show examples:
+### Examples
+
+Examples are listed below:
 
 - [Resume with single column layout](./examples/showcase/resume_single_column)
   - This example shows how to write a resume with a single column layout
@@ -152,7 +152,7 @@ Now, we show examples:
 
 ### Appendix: How to build examples in showcase
 
-This appendix section shows how to build PDF and LaTeX files from Markdown files with Pandoc using the "Resume with single column layout" example in showcase.
+This appendix section shows how to build PDF and LaTeX files from a Markdown file with Pandoc for the example "Resume with single column layout".
 
 > [!NOTE]
 > This section is specifically for macOS users.
