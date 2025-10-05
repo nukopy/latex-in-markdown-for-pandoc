@@ -153,3 +153,6 @@ resume.md
 # 日本語のドキュメントはノイズになるのでコミットしない
 AGENTS.md
 docs/tasks/
+
+# for assets
+*.mov
