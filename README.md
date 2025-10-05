@@ -125,6 +125,7 @@ You can add frontmatter comments that trigger the highlighting by typing `pandoc
 
 > [!WARNING]
 > You might think LaTeX code will still be highlighted even if you skip adding the end comment `# ----- pandoc-latex-end -----` to the frontmatter.
+>
 > However, this extension depends on those comments to delimit the scope it highlights, so omitting them can lead to unexpected errors. Make sure you add the `# ----- pandoc-latex-end -----` comment to the end of the frontmatter correctly.
 
 ## Showcase
@@ -137,7 +138,7 @@ TODO: single columns の resume と multi columns の resume。
 - [x] 1. Highlight LaTeX syntax in Markdown
   - [x] LaTeX in Markdown frontmatter written in YAML
   - [x] LaTeX in Markdown body
-- [ ] 2. Extend LSP support to LaTeX code in Markdown (hover documentation and go-to-definition).
+- [ ] 2. Extend LSP support to LaTeX code in Markdown (hover documentation and go-to-definition) or LaTeX Workshop integration.
   - [ ] LaTeX in Markdown frontmatter written in YAML
   - [ ] LaTeX in Markdown body
 
