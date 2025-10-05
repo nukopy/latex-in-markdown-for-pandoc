@@ -35,8 +35,9 @@ build-pdf:
 		echo "Input not found: $(FILE)"; \
 		exit 1; \
 	fi
-	mkdir -p "$(OUTPUT_DIR_PDF)"; \
-	OUTPUT_PATH="$(OUTPUT_DIR_PDF)/$(basename $(notdir $(FILE))).pdf"; \
+
+	# output to the same directory as the input file
+	OUTPUT_PATH="$(dir $(FILE))/$(basename $(notdir $(FILE))).pdf"; \
 	echo "Generating $$OUTPUT_PATH"; \
 	pandoc "$(FILE)" --pdf-engine="$(PDF_ENGINE)" \
 	  -o "$$OUTPUT_PATH" && \
@@ -51,8 +52,9 @@ build-tex:
 		echo "Input not found: $(FILE)"; \
 		exit 1; \
 	fi
-	mkdir -p "$(OUTPUT_DIR_TEX)"; \
-	OUTPUT_PATH="$(OUTPUT_DIR_TEX)/$(basename $(notdir $(FILE))).tex"; \
+
+	# output to the same directory as the input file
+	OUTPUT_PATH="$(dir $(FILE))/$(basename $(notdir $(FILE))).tex"; \
 	echo "Generating $$OUTPUT_PATH"; \
 	pandoc "$(FILE)" -s -t latex \
 	  -o "$$OUTPUT_PATH" && \
