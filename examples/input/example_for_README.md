@@ -68,4 +68,37 @@ header-includes:
 # ----- pandoc-latex-end -----
 ---
 
-# title
+# gif example
+
+## snippets: template
+
+```markdown
+---
+# ----- pandoc-latex-begin -----
+
+header-includes:
+  - \usepackage{graphix}
+
+# ----- pandoc-latex-end -----
+---
+```
+
+## snippets: begin, end
+
+```markdown
+---
+header-includes:
+  # use packages
+  - \usepackage{graphix}
+
+  # list style
+  - |
+    \setlist[itemize]{
+      topsep=\fpeval{-\basefontsize*0.5}pt,
+      partopsep=0pt,
+      parsep=0pt,
+      itemsep=\fpeval{\basefontsize*0.35}pt,
+      after=\vspace{\fpeval{\basefontsize*0.5}pt}
+    }
+---
+```
