@@ -1,7 +1,7 @@
 # LaTeX in Markdown for Pandoc
 
 <p align="center">
-  <img src="./assets/icon.png" alt="LaTeX in Markdown for Pandoc" width="256">
+  <img src="https://gist.github.com/user-attachments/assets/c2e1cd6f-e1f2-4c1d-98b8-359d64ed0b1b" alt="LaTeX in Markdown for Pandoc" width="256">
 </p>
 
 <p align="center">
