@@ -57,9 +57,7 @@ Body highlight in light theme:
 
 ![Body highlight in light theme](./docs/images/features-highlight-body-light.png)
 
-## Quickstart
-
-### Installation
+## Installation
 
 This extension is available for free in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc).
 
@@ -67,9 +65,15 @@ If you're Cursor user, you cannot install this extension from the marketplace no
 
 However, you can install it from `.vsix` file. See the section [Install locally](#install-locally) for details.
 
-### Usage
+## Usage
 
-Once the installation is complete, LaTeX code written in the Markdown body will be highlighted. However, one more step is required to **enable highlighting LaTeX in the frontmatter**.
+### Body highlight
+
+Once the installation is complete, LaTeX code written in the Markdown body will be highlighted with no configuration like [example](#body-highlight).
+
+### Frontmatter highlight
+
+However, one more step is required to **enable highlighting LaTeX in the frontmatter** like [example](#frontmatter-highlight).
 
 LaTeX syntax highlight in the frontmatter is enabled by adding the following 2 lines of YAML comments at the beginning and end of the frontmatter of a Pandoc-flavoured Markdown file.
 
