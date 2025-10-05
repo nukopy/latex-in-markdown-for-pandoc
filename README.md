@@ -46,16 +46,15 @@ Body highlight in light theme:
 
 ![Body highlight in light theme](./docs/images/features-highlight-body-light.png)
 
-## Requirements
-
-- Visual Studio Code v1.99.x or later
-- (optional) Cursor 1.7.x or later
-
-## Quick start
+## Quickstart
 
 ### Installation
 
 This extension is available for free in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc).
+
+If you're Cursor user, you cannot install this extension from the marketplace now (planned to be supported in the future).
+
+However, you can install it from `.vsix` file. See the section [Install locally](#install-locally) for details.
 
 ### Usage
 
@@ -157,7 +156,7 @@ pnpm run build
 
 If successful, the extension package `dist/latex-in-markdown-for-pandoc-<version>.vsix` is created.
 
-### Install locally for testing
+### Install locally
 
 Execute command `Extensions: Install from VSIX...` in VS Code (or Cursor) and select the file `dist/latex-in-markdown-for-pandoc-<version>.vsix`.
 
