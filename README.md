@@ -1,7 +1,7 @@
 # LaTeX in Markdown for Pandoc
 
 <p align="center">
-  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/42367320/497573037-c2e1cd6f-e1f2-4c1d-98b8-359d64ed0b1b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251005%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251005T175709Z&X-Amz-Expires=300&X-Amz-Signature=c76d9ced2f5338ec924e324f8fb49bf0713d7dfb529307602c725985d4f13225&X-Amz-SignedHeaders=host" alt="LaTeX in Markdown for Pandoc" width="256">
+  <img src="https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/icon.png" alt="LaTeX in Markdown for Pandoc" width="256">
 </p>
 
 <p align="center">
@@ -141,7 +141,7 @@ Each example contains a list of files as follows:
 
 - [Resume with single column layout](./examples/showcase/resume_single_column)
   - This example shows how to write a resume with a single column layout
-- [Statistics - the proof of the normal distribution](./examples/showcase/statistics_proof_normal_distribution)
+- [Statistics - basics of the normal distribution](./examples/showcase/statistics_normal_distribution_basic)
   - This example shows how to write a statistics topic
   - This is written in Japanese
 
