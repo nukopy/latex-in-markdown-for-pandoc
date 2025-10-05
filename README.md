@@ -5,10 +5,6 @@
 </p>
 
 <p align="center">
-  <!-- [![Version badge][version-badge]][version-url]
-  [![Downloads badge][downloads-badge]][downloads-url]
-  [![Installs badge][installs-badge]][installs-url]
-  [![MIT license badge][mit-badge]][mit-url] -->
   <a href="https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc"><img src="https://img.shields.io/visual-studio-marketplace/v/nukopy.latex-in-markdown-for-pandoc" alt="Version badge"></a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc"><img src="https://img.shields.io/visual-studio-marketplace/d/nukopy.latex-in-markdown-for-pandoc" alt="Downloads badge"></a>
   <a href="https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc"><img src="https://img.shields.io/visual-studio-marketplace/i/nukopy.latex-in-markdown-for-pandoc" alt="Installs badge"></a>
@@ -22,7 +18,7 @@
   |
   <a href="#usage">Usage</a>
   |
-  <a href="#how-it-works">How it works</a>
+  <a href="#showcase">Showcase</a>
 </p>
 
 Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown documents processed with [Pandoc](https://pandoc.org/index.html).
