@@ -16,6 +16,8 @@
   |
   <a href="#installation">Installation</a>
   |
+  <a href="#quickstart">Quickstart</a>
+  |
   <a href="#usage">Usage</a>
   |
   <a href="#showcase">Showcase</a>
@@ -57,13 +59,43 @@ Body highlight in light theme:
 
 This extension is available for free in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc).
 
-If you're Cursor user, you cannot install this extension from the marketplace now (planned to be supported in the future). However, you can install it from `.vsix` file. See the section [Install locally](#install-locally) for details.
+If you're a Cursor user, you cannot install this extension from the marketplace now (planned to be supported in the future). However, you can install it from `.vsix` file. See the section [Install locally](#install-locally) for details.
+
+## Quickstart
+
+1. Install this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc).
+2. Create a new Markdown file.
+3. Copy and paste the format below:
+
+   ```md
+   ---
+   # ----- pandoc-latex-begin -----
+   # The code below is treated as normal YAML
+   documentclass: extarticle
+   papersize: a4
+   pagestyle: empty
+   geometry:
+     - top=17.5mm
+     - bottom=20mm
+     - left=20mm
+     - right=20mm
+   # ----- pandoc-latex-end -----
+   ---
+
+   # title of the document
+
+   ## section 1
+
+   ## section 2
+   ```
+
+4. You'll see LaTeX code in the frontmatter is highlighted!
 
 ## Usage
 
 ### Body highlight
 
-Once the installation is complete, LaTeX code written in the Markdown body will be highlighted with no configuration like [example](#body-highlight).
+Once the installation is complete, LaTeX code written in the Markdown body will be highlighted with **no configuration** like [example](#body-highlight).
 
 ### Frontmatter highlight
 
@@ -128,9 +160,7 @@ You can add frontmatter comments that trigger the highlighting by typing `pandoc
 
 ## Showcase
 
-In this section, we show some examples of LaTeX in Markdown for Pandoc.
-
-As appendix, we show how to build PDF and LaTeX files from Markdown files with Pandoc, too.
+In this section, we show some examples of LaTeX in Markdown for Pandoc. As an appendix, we also show how to build PDF and LaTeX files from Markdown files with Pandoc.
 
 ### Overview
 
@@ -168,7 +198,7 @@ This appendix section shows how to build PDF and LaTeX files from a Markdown fil
 
 #### Install dependencies
 
-Install pandoc and MacTex:
+Install pandoc and MacTeX:
 
 ```sh
 # Install pandoc
@@ -206,7 +236,7 @@ file main.pdf
 
 # build LaTeX file
 pandoc main.md -s -t latex -o main.tex
-file main.pdf
+file main.tex
 ```
 
 Now, you can see the `main.pdf` file with a PDF viewer and the `main.tex` file with your favorite text editor.
@@ -215,10 +245,10 @@ Let's try to use this extension to see LaTeX syntax highlight in the `main.md` f
 
 ## Roadmap
 
-- [x] 1. Highlight LaTeX syntax in Markdown
+- [x] Highlight LaTeX syntax in Markdown
   - [x] LaTeX in Markdown frontmatter written in YAML
   - [x] LaTeX in Markdown body
-- [ ] 2. Extend LSP support to LaTeX code in Markdown (hover documentation and go-to-definition) or LaTeX Workshop integration.
+- [ ] Extend LSP support to LaTeX code in Markdown (hover documentation and go-to-definition) or LaTeX Workshop integration.
   - [ ] LaTeX in Markdown frontmatter written in YAML
   - [ ] LaTeX in Markdown body
 
