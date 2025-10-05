@@ -149,6 +149,7 @@ dist/
 
 # for local
 resume.md
+tmp/
 
 # 日本語のドキュメントはノイズになるのでコミットしない
 AGENTS.md
