@@ -136,11 +136,11 @@ header-includes:
 
   # LinkedIn icon
   - |
-    \newcommand{\LinkedInBlackIcon}{\raisebox{-0.2em}{\includegraphics[height=0.9em]{examples/showcase/resume_single_column/assets/LinkedInBlackLogo.png}}}
+    \newcommand{\LinkedInBlackIcon}{\raisebox{-0.2em}{\includegraphics[height=0.9em]{./assets/LinkedInBlackLogo.png}}}
 
   # Zenn icon
   - |
-    \newcommand{\ZennBlackIcon}{\raisebox{-0.2em}{\includegraphics[height=0.9em]{examples/showcase/resume_single_column/assets/ZennBlackLogo.png}}}
+    \newcommand{\ZennBlackIcon}{\raisebox{-0.2em}{\includegraphics[height=0.9em]{./assets/ZennBlackLogo.png}}}
 
   # ------------------------------------------------------------
   # heading styles
