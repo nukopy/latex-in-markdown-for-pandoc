@@ -18,9 +18,33 @@ Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown d
 
 ## Features
 
-TODO: frontmatter にハイライトが当たっている様子のスクショ
+LaTeX code in both the Markdown frontmatter and body will be highlighted with this extension.
 
-TODO: body にハイライトが当たっている様子のスクショ
+You can keep using your favorite theme. Features are shown below:
+
+- Highlight LaTeX syntax in Markdown for Pandoc
+  - LaTeX in Markdown frontmatter written in YAML
+  - LaTeX in Markdown body
+
+### Frontmatter highlight
+
+Frontmatter highlight in dark theme ([Atom One Dark](https://vscodethemes.com/e/akamud.vscode-theme-onedark/atom-one-dark)):
+
+![Frontmatter highlight in dark theme](./docs/images/features-highlight-frontmatter-dark.png)
+
+Frontmatter highlight in light theme ([Bold Light (rainglow)](https://vscodethemes.com/e/daylerees.rainglow/bold-light-rainglow)):
+
+![Frontmatter highlight in light theme](./docs/images/features-highlight-frontmatter-light.png)
+
+### Body highlight
+
+Body highlight in dark theme:
+
+![Body highlight in dark theme](./docs/images/features-highlight-body-dark.png)
+
+Body highlight in light theme:
+
+![Body highlight in light theme](./docs/images/features-highlight-body-light.png)
 
 ## Requirements
 
