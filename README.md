@@ -58,60 +58,47 @@ However, you can install it from `.vsix` file. See the section [Install locally]
 
 ### Usage
 
-In this extension, syntax highlight is enabled by adding the following 2 lines of comments shown below in the frontmatter of a Pandoc-flavoured Markdown file.
+Once the installation is complete, LaTeX code written in the Markdown body will be highlighted. However, one more step is required to **enable highlighting LaTeX in the frontmatter**.
+
+LaTeX syntax highlight in the frontmatter is enabled by adding the following 2 lines of YAML comments at the beginning and end of the frontmatter of a Pandoc-flavoured Markdown file.
 
 - `# ----- pandoc-latex-begin -----`
 - `# ----- pandoc-latex-end -----`
 
-After adding these comments, the range between them in frontmatter is highlighted as LaTeX code. **This is a necessary step to enable syntax highlight**.
+After adding these comments, the range between them in frontmatter is highlighted as LaTeX code. **This is a necessary step to enable LaTeX syntax highlight in the frontmatter**. We provide [utility snippets](#utility-snippets) to easily add these comments.
 
-Your Markdown frontmatter should look like the following:
+If correctly set up, LaTeX code, such as `\usepackage{graphicx}`, in the frontmatter is highlighted in your editor.
 
-```yaml
----
-# ----- pandoc-latex-begin -----
-
-# highlighted as LaTeX code!!!
-
-# ----- pandoc-latex-end -----
---- # <- punctuation to end frontmatter
-```
-
-Example of Markdown frontmatter that enables syntax highlight with this extension is the following. If correctly set up, LaTeX code, such as `\usepackage{graphicx}`, is highlighted.
+Markdown frontmatter should look like the following:
 
 ```yaml
 ---
 # ----- pandoc-latex-begin -----
 
+# The code below is treated as normal YAML
 documentclass: extarticle
 papersize: a4
 pagestyle: empty
-
 geometry:
   - top=17.5mm
   - bottom=20mm
   - left=20mm
   - right=20mm
 
-fontsize: 10pt
-mainfont: "Hack Nerd Font Mono"
-sansfont: "Hack Nerd Font Mono"
-CJKmainfont: "Hiragino Sans W3"
-monofont: "Hack Nerd Font Mono"
-
+# The code below is highlighted as LaTeX code in your editor!
 header-includes:
-  # highlighted as LaTeX code in your editor!
   - \usepackage{xcolor}
   - \usepackage{graphicx}
   - \usepackage{titlesec}
   - \usepackage{setspace}
-  - \usepackage{fontawesome5}
-  - \usepackage{xfp}
-  - \usepackage[normalem]{ulem}
 
 # ----- pandoc-latex-end -----
----
+--- # <- punctuation to end frontmatter
 ```
+
+### Utility snippets
+
+This extension provides utility snippets to easily add the comments above.
 
 TODO: snippets の説明 with gif
 
