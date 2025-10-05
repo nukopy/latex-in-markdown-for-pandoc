@@ -4,19 +4,16 @@
   <img src="./assets/icon.png" alt="LaTeX in Markdown for Pandoc" width="256">
 </p>
 
-[![Version badge][version-badge]][version-url]
-[![Downloads badge][downloads-badge]][downloads-url]
-[![Installs badge][installs-badge]][installs-url]
-[![MIT license badge][mit-badge]][mit-url]
-
-[version-badge]: https://img.shields.io/visual-studio-marketplace/v/nukopy.latex-in-markdown-for-pandoc
-[version-url]: https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc
-[downloads-badge]: https://img.shields.io/visual-studio-marketplace/d/nukopy.latex-in-markdown-for-pandoc
-[downloads-url]: https://vsmarketplacebadge.apphb.com/downloads-short/nukopy.latex-in-markdown-for-pandoc.svg
-[installs-badge]: https://img.shields.io/visual-studio-marketplace/i/nukopy.latex-in-markdown-for-pandoc
-[installs-url]: https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc
-[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
-[mit-url]: https://github.com/nukopy/latex-in-markdown-for-pandoc/blob/main/LICENSE
+<p align="center">
+  <!-- [![Version badge][version-badge]][version-url]
+  [![Downloads badge][downloads-badge]][downloads-url]
+  [![Installs badge][installs-badge]][installs-url]
+  [![MIT license badge][mit-badge]][mit-url] -->
+  <a href="https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc"><img src="https://img.shields.io/visual-studio-marketplace/v/nukopy.latex-in-markdown-for-pandoc" alt="Version badge"></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc"><img src="https://img.shields.io/visual-studio-marketplace/d/nukopy.latex-in-markdown-for-pandoc" alt="Downloads badge"></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc"><img src="https://img.shields.io/visual-studio-marketplace/i/nukopy.latex-in-markdown-for-pandoc" alt="Installs badge"></a>
+  <a href="https://github.com/nukopy/latex-in-markdown-for-pandoc/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT license badge"></a>
+</p>
 
 <p align="center">
   <a href="#features">Features</a>
