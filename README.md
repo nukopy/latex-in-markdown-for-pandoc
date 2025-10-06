@@ -1,7 +1,7 @@
 # LaTeX in Markdown for Pandoc
 
 <p align="center">
-  <img src="https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/icon.png" alt="LaTeX in Markdown for Pandoc" width="256">
+  <img src="https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/assets/icon.png" alt="LaTeX in Markdown for Pandoc" width="256">
 </p>
 
 <p align="center">
@@ -41,11 +41,11 @@ Features are as follows:
 
 Frontmatter highlight in dark theme ([Atom One Dark](https://vscodethemes.com/e/akamud.vscode-theme-onedark/atom-one-dark)):
 
-![Frontmatter highlight in dark theme](./docs/images/features-highlight-frontmatter-dark.png)
+![Frontmatter highlight in dark theme](https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/assets/features-highlight-frontmatter-dark.png)
 
 Frontmatter highlight in light theme ([Bold Light (rainglow)](https://vscodethemes.com/e/daylerees.rainglow/bold-light-rainglow)):
 
-![Frontmatter highlight in light theme](./docs/images/features-highlight-frontmatter-light.png)
+![Frontmatter highlight in light theme](https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/assets/features-highlight-frontmatter-light.png)
 
 ### [WIP] Body highlight
 
@@ -130,13 +130,13 @@ Use the following snippets to insert comments mentioned above quickly.
 
 You can add frontmatter template by typing `pandoc template` like below:
 
-![snippets: pandoc template](./assets/snippets-pandoc-template.gif)
+![snippets: pandoc template](https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/assets/snippets-pandoc-template.gif)
 
 #### for existing frontmatter
 
 You can add frontmatter comments that trigger the highlighting by typing `pandoc begin` and `pandoc end`. **You must type these inside the frontmatter block.**
 
-![snippets: pandoc begin, end](./assets/snippets-pandoc-begin-end.gif)
+![snippets: pandoc begin, end](https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/assets/snippets-pandoc-begin-end.gif)
 
 > [!WARNING]
 > You might think LaTeX code will still be highlighted even if you skip adding the end comment `# ----- pandoc-latex-end -----` to the frontmatter.
