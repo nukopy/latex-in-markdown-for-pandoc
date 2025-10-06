@@ -59,6 +59,7 @@ header-includes:
   - \theoremstyle{definition}
   - \newtheorem{dfn}{定義}
   - \newtheorem*{dfn*}{定義}
+  - \renewcommand{\proofname}{証明}
 # ----- pandoc-latex-end -----
 ---
 
@@ -113,66 +114,104 @@ $$
 
 ### 正規分布の期待値（平均）の導出
 
-TODO: 期待値の導出
+\begin{thm*}
 
-<!--
-期待値の定義 $\E[X] = \int_{-\infty}^{\infty} x p(x) \, \diff x$ に基づいて計算します。
+$X \sim N(\mu, \sigma^2)$ に対して期待値は $E[X] = \mu$ である。
+
+\end{thm*}
+
+\begin{proof}
+正規分布の定義より、確率密度関数は
+
+$$
+p(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+$$
+
+と表される。期待値は定義から
 
 \begin{align*}
-\E[X]
-&= \int*{-\infty}^{\infty} x p(x) \, \diff x \\
-&= \frac{1}{\sqrt{2\pi \sigma^2}} \int*{-\infty}^{\infty} x \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) \diff x \\
-&= \frac{1}{\sqrt{2\pi \sigma^2}} \int*{-\infty}^{\infty} \bigl((x-\mu) + \mu\bigr) \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) \diff x \\
-&= \frac{1}{\sqrt{2\pi \sigma^2}} \int*{-\infty}^{\infty} (x-\mu) \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) \diff x \\[-0.25em]
-&\quad+ \mu \cdot \frac{1}{\sqrt{2\pi \sigma^2}} \int\_{-\infty}^{\infty} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) \diff x.
+E[X]
+&= \int_{-\infty}^{\infty} x \, p(x) \, \diff x \\
+&= \int_{-\infty}^{\infty} \bigl((x-\mu) + \mu\bigr) p(x) \, \diff x \\
+&= \mu \int_{-\infty}^{\infty} p(x) \, \diff x + \int_{-\infty}^{\infty} (x-\mu) p(x) \, \diff x.
 \end{align*}
 
-第 1 項について $y = \dfrac{x-\mu}{\sigma}$ とおくと、
+正規分布は確率密度関数の積分が 1 であるため、第一項は $\mu$ となる。第二項は変数変換 $y = \frac{x-\mu}{\sigma}$ を用いると
 
 \begin{align*}
-\frac{1}{\sqrt{2\pi \sigma^2}} \int*{-\infty}^{\infty} (x-\mu) \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) \diff x
-&= \frac{\sigma}{\sqrt{2\pi}} \int*{-\infty}^{\infty} y \exp\left(-\frac{y^2}{2}\right) \diff y \\
-&= 0,
+\int_{-\infty}^{\infty} (x-\mu) p(x) \, \diff x
+&= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \sigma y \exp\left(-\frac{y^2}{2}\right) \diff y \\
+&= \frac{\sigma}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y \exp\left(-\frac{y^2}{2}\right) \diff y.
 \end{align*}
 
-となります。これは被積分関数が奇関数であり、$y$ 軸対称に打ち消し合うためです。また第 2 項はガウス積分 $\int_{-\infty}^{\infty} \exp(-y^2/2) \diff y = \sqrt{2\pi}$ を用いると $1$ になります。したがって $\E[X] = \mu$ が導かれます。 -->
+被積分関数 $y \exp(-y^2/2)$ は奇関数であり、積分区間 $(-\infty, \infty)$ は対称であるため、この積分は 0 となる。したがって
+
+$$
+E[X] = \mu + 0 = \mu
+$$
+
+が得られる。
+\end{proof}
+
+\newpage
 
 ### 正規分布の分散の導出
 
-TODO: 正規分布の分散の導出
+\begin{thm*}
 
-<!-- 分散の定義 $\Var(X) = \E\!\bigl[(X-\E[X])^2\bigr]$ と先ほど求めた $\E[X] = \mu$ を用います。
+$X \sim N(\mu, \sigma^2)$ に対して分散は $V(X) = \sigma^2$ である。
 
-\begin{align*}
-\Var(X)
-&= \int*{-\infty}^{\infty} (x-\mu)^2 p(x) \, \diff x \\
-&= \frac{1}{\sqrt{2\pi \sigma^2}} \int*{-\infty}^{\infty} (x-\mu)^2 \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) \diff x.
-\end{align*}
+\end{thm*}
 
-ここでも $y = \dfrac{x-\mu}{\sigma}$ とおくと、
-
-\begin{align*}
-\Var(X)
-&= \frac{\sigma^2}{\sqrt{2\pi}} \int\_{-\infty}^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \diff y.
-\end{align*}
-
-積分は部分積分を用いて評価できます。
-
-\begin{align*}
-\int*{-\infty}^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \diff y
-&= \left[-y \exp\left(-\frac{y^2}{2}\right)\right]_{-\infty}^{\infty} + \int\_{-\infty}^{\infty} \exp\left(-\frac{y^2}{2}\right) \diff y \\
-&= 0 + \sqrt{2\pi}.
-\end{align_}
-
-したがって
+\begin{proof}
+分散の定義から
 
 $$
-\Var(X) = \frac{\sigma^2}{\sqrt{2\pi}} \cdot \sqrt{2\pi} = \sigma^2.
-$$ -->
+V(X) = E\bigl[(X-\mu)^2\bigr] = \int_{-\infty}^{\infty} (x-\mu)^2 p(x) \, \diff x
+$$
+
+となる。期待値の導出と同様に $y = \frac{x-\mu}{\sigma}$ と置くと
+
+\begin{align*}
+V(X)
+&= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} (\sigma y)^2 \exp\left(-\frac{y^2}{2}\right) \diff y \\
+&= \frac{\sigma^2}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \diff y.
+\end{align*}
+
+ここで積分を評価するために、偶関数性を利用して積分区間を $[0, \infty)$ へ制限し、部分積分を適用する。
+
+\begin{align*}
+\int_{-\infty}^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \diff y
+&= 2 \int_0^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \diff y \\
+&= 2 \left[ -y \exp\left(-\frac{y^2}{2}\right) \right]_0^{\infty} + 2 \int_0^{\infty} \exp\left(-\frac{y^2}{2}\right) \diff y.
+\end{align*}
+
+境界項は 0 に収束するため消える。また、ガウス積分（正規分布の正規化条件）\footnote{\href{https://mathlandscape.com/gauss-integral/}{Web サイト: 数学の景色 - ガウス積分のさまざまな形とその証明 5 つ}}より
+
+$$
+\int_{-\infty}^{\infty} \exp\left(-\frac{y^2}{2}\right) \diff y = \sqrt{2\pi}
+$$
+
+が成り立つので、半区間の積分はその半分であり、$\int_0^{\infty} \exp(-y^2/2) \diff y = \sqrt{2\pi}/2$ となる。以上から
+
+$$
+\int_{-\infty}^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \diff y = 2 \cdot \frac{\sqrt{2\pi}}{2} = \sqrt{2\pi}
+$$
+
+が得られる。したがって
+
+$$
+V(X) = \frac{\sigma^2}{\sqrt{2\pi}} \times \sqrt{2\pi} = \sigma^2
+$$
+
+が示された。
+\end{proof}
+
+\newpage
 
 ### 正規分布の標準偏差の導出
 
-標準偏差の定義は、分散の平方根 $\sqrt{V(X)}$ である。分散が $\sigma^2$ と導出されたことから、
+標準偏差の定義は、分散の平方根 $\sqrt{V(X)}$ である。分散が $V(X) = \sigma^2$ と導出されたことから、
 
 $$
 \sqrt{V(X)} = \sqrt{\sigma^2} = \sigma

@@ -23,9 +23,6 @@
 \usepackage{lmodern}
 \ifPDFTeX\else
   % xetex/luatex font selection
-  \setmainfont[]{Hack Nerd Font Mono}
-  \setsansfont[]{Hack Nerd Font Mono}
-  \setmonofont[]{Hack Nerd Font Mono}
   \ifXeTeX
     \usepackage{xeCJK}
     \setCJKmainfont[]{Hiragino Sans W3}
@@ -72,6 +69,8 @@
 \newtheorem*{thm*}{定理}
 \theoremstyle{definition}
 \newtheorem{dfn}{定義}
+\newtheorem*{dfn*}{定義}
+\renewcommand{\proofname}{証明}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -88,9 +87,13 @@
 \begin{document}
 \maketitle
 
+\maketitle
+
+\tableofcontents
+
 \subsection{参考}\label{ux53c2ux8003}
 
-本ドキュメントは以下の資料を参考に作成しています。
+本ドキュメントは以下の資料を参考に作成している。
 
 \begin{itemize}
 \tightlist
@@ -103,49 +106,150 @@
   - 【LaTeX】定理環境 amsthm パッケージの使い方を徹底解説}
 \end{itemize}
 
-\tableofcontents
-
 \newpage
 
 \subsection{イントロダクション：正規分布の期待値、分散、標準偏差}\label{ux30a4ux30f3ux30c8ux30edux30c0ux30afux30b7ux30e7ux30f3ux6b63ux898fux5206ux5e03ux306eux671fux5f85ux5024ux5206ux6563ux6a19ux6e96ux504fux5dee}
 
-平均 \mu \in \mathbb{R}、分散 \sigma\^{}2 \textgreater{} 0
-をもつ正規分布 X \sim N(\mu, \sigma\^{}2) の確率密度関数は、
+本ドキュメントでは、正規分布の定義から期待値、分散、標準偏差を導出する。
 
-p(x) = \frac{1}{\sqrt{2\pi \sigma^2}}
-\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+まずは正規分布の期待値、分散、標準偏差の定理を確認する。
 
-となります。このとき、期待値、分散、標準偏差はそれぞれ次のとおりとなります。
+\begin{thm*}
 
-\mathbb{E}[X] = \mu, \qquad \mathrm{Var}(X) = \sigma\^{}2,
-\qquad \sqrt{\mathrm{Var}(X)} = \sigma.
+確率変数 $X$ が正規分布 $N(\mu, \sigma^2)$ に従うとき（$X \sim N(\mu, \sigma^2)$）、$X$ の期待値、分散、標準偏差はそれぞれ次のとおりとなる。
 
-以下では、正規分布の定義から期待値、分散、標準偏差を導出する方法を紹介します。
+$$
+E[X] = \mu, \qquad V(X) = \sigma^2, \qquad \sqrt{V(X)} = \sigma.
+$$
 
-\subsection{正規分布の定義\#\#
-正規分布の定義}\label{ux6b63ux898fux5206ux5e03ux306eux5b9aux7fa9-ux6b63ux898fux5206ux5e03ux306eux5b9aux7fa9}
+\end{thm*}
 
-まず、正規分布の確率密度関数の定義を確認します。
+\subsection{正規分布の定義}\label{ux6b63ux898fux5206ux5e03ux306eux5b9aux7fa9}
 
-\$\$
+まず、正規分布の確率密度関数の定義を確認する。
 
-\begin{dfn}
+\begin{dfn*}
 
-X を確率変数、\mu \in \mathbb{R}、\sigma > 0 とする。
+$X$ を確率変数、$\mu \in \mathbb{R}$、$\sigma > 0$ とする。$X$ の確率密度関数が
 
-平均 \mu \in \mathbb{R}、分散 \sigma^2 > 0 をもつ正規分布 X \sim N(\mu, \sigma^2) の確率密度関数は
-
+$$
 p(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+$$
 
-\end{dfn}
+となるとき、$X$ は正規分布 $N(\mu, \sigma^2)$（normal distribution）に従うといい、$X \sim N(\mu, \sigma^2)$ と表す。
 
-\$\$
+\end{dfn*}
 
-\subsection{証明}\label{ux8a3cux660e}
+\newpage
 
-\subsection{正規分布の分散の導出:
-定義から直接証明する方法}\label{ux6b63ux898fux5206ux5e03ux306eux5206ux6563ux306eux5c0eux51fa-ux5b9aux7fa9ux304bux3089ux76f4ux63a5ux8a3cux660eux3059ux308bux65b9ux6cd5}
+\subsection{正規分布の期待値、分散、標準偏差の導出}\label{ux6b63ux898fux5206ux5e03ux306eux671fux5f85ux5024ux5206ux6563ux6a19ux6e96ux504fux5deeux306eux5c0eux51fa}
 
-\subsection{正規分布の標準偏差について}\label{ux6b63ux898fux5206ux5e03ux306eux6a19ux6e96ux504fux5deeux306bux3064ux3044ux3066}
+\subsubsection{正規分布の期待値（平均）の導出}\label{ux6b63ux898fux5206ux5e03ux306eux671fux5f85ux5024ux5e73ux5747ux306eux5c0eux51fa}
+
+\begin{thm*}
+
+$X \sim N(\mu, \sigma^2)$ に対して期待値は $E[X] = \mu$ である。
+
+\end{thm*}
+
+\begin{proof}
+正規分布の定義より、確率密度関数は
+
+$$
+p(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+$$
+
+と表される。期待値は定義から
+
+\begin{align*}
+E[X]
+&= \int_{-\infty}^{\infty} x \, p(x) \, \mathrm{d}x \\
+&= \int_{-\infty}^{\infty} \bigl((x-\mu) + \mu\bigr) p(x) \, \mathrm{d}x \\
+&= \mu \int_{-\infty}^{\infty} p(x) \, \mathrm{d}x + \int_{-\infty}^{\infty} (x-\mu) p(x) \, \mathrm{d}x.
+\end{align*}
+
+正規分布は確率密度関数の積分が 1 であるため、第一項は $\mu$ となる。第二項は変数変換 $y = \frac{x-\mu}{\sigma}$ を用いると
+
+\begin{align*}
+\int_{-\infty}^{\infty} (x-\mu) p(x) \, \mathrm{d}x
+&= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} \sigma y \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y \\
+&= \frac{\sigma}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y.
+\end{align*}
+
+被積分関数 $y \exp(-y^2/2)$ は奇関数であり、積分区間 $(-\infty, \infty)$ は対称であるため、この積分は 0 となる。したがって
+
+$$
+E[X] = \mu + 0 = \mu
+$$
+
+が得られる。
+\end{proof}
+
+\newpage
+
+\subsubsection{正規分布の分散の導出}\label{ux6b63ux898fux5206ux5e03ux306eux5206ux6563ux306eux5c0eux51fa}
+
+\begin{thm*}
+
+$X \sim N(\mu, \sigma^2)$ に対して分散は $V(X) = \sigma^2$ である。
+
+\end{thm*}
+
+\begin{proof}
+分散の定義から
+
+$$
+V(X) = E\bigl[(X-\mu)^2\bigr] = \int_{-\infty}^{\infty} (x-\mu)^2 p(x) \, \mathrm{d}x
+$$
+
+となる。期待値の導出と同様に $y = \frac{x-\mu}{\sigma}$ と置くと
+
+\begin{align*}
+V(X)
+&= \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} (\sigma y)^2 \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y \\
+&= \frac{\sigma^2}{\sqrt{2\pi}} \int_{-\infty}^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y.
+\end{align*}
+
+ここで積分を評価するために、偶関数性を利用して積分区間を $[0, \infty)$ へ制限し、部分積分を適用する。
+
+\begin{align*}
+\int_{-\infty}^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y
+&= 2 \int_0^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y \\
+&= 2 \left[ -y \exp\left(-\frac{y^2}{2}\right) \right]_0^{\infty} + 2 \int_0^{\infty} \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y.
+\end{align*}
+
+境界項は 0 に収束するため消える。また、ガウス積分（正規分布の正規化条件）\footnote{\href{https://mathlandscape.com/gauss-integral/}{Web サイト: 数学の景色 - ガウス積分のさまざまな形とその証明 5 つ}}より
+
+$$
+\int_{-\infty}^{\infty} \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y = \sqrt{2\pi}
+$$
+
+が成り立つので、半区間の積分はその半分であり、$\int_0^{\infty} \exp(-y^2/2) \mathrm{d}y = \sqrt{2\pi}/2$ となる。以上から
+
+$$
+\int_{-\infty}^{\infty} y^2 \exp\left(-\frac{y^2}{2}\right) \mathrm{d}y = 2 \cdot \frac{\sqrt{2\pi}}{2} = \sqrt{2\pi}
+$$
+
+が得られる。したがって
+
+$$
+V(X) = \frac{\sigma^2}{\sqrt{2\pi}} \times \sqrt{2\pi} = \sigma^2
+$$
+
+が示された。
+\end{proof}
+
+\newpage
+
+\subsubsection{正規分布の標準偏差の導出}\label{ux6b63ux898fux5206ux5e03ux306eux6a19ux6e96ux504fux5deeux306eux5c0eux51fa}
+
+標準偏差の定義は、分散の平方根 \(\sqrt{V(X)}\) である。分散が
+\(V(X) = \sigma^2\) と導出されたことから、
+
+\[
+\sqrt{V(X)} = \sqrt{\sigma^2} = \sigma
+\]
+
+が直ちに得られる。
 
 \end{document}
