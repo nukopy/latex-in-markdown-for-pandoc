@@ -259,7 +259,7 @@ Now, you can start developing the extension.
 ### Build
 
 ```sh
-pnpm run build
+pnpm run vsce:build
 ```
 
 If successful, the extension package `dist/latex-in-markdown-for-pandoc-<version>.vsix` is created.
@@ -282,7 +282,7 @@ ref: [Publishing Extensions | Visual Studio Code](https://code.visualstudio.com/
 - Login to VS Code Marketplace
 
 ```sh
-pnpm run login -- <publisher ID>
+pnpm run vsce:login -- <publisher ID>
 # input Personal Access Token
 ```
 
@@ -298,13 +298,13 @@ pnpm run login -- <publisher ID>
 - Release
 
 ```sh
-pnpm run publish
+pnpm run vsce:publish
 ```
 
 - Unpublish
 
 ```sh
-pnpm run unpublish
+pnpm run vsce:unpublish
 ```
 
 ## References
