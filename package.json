@@ -32,11 +32,11 @@
     "ci": "biome ci",
     "----- test -----": "",
     "test": "echo \"No tests yet\"",
-    "----- release -----": "",
-    "build": "vsce package -o dist/",
-    "login": "vsce login",
-    "publish": "vsce publish",
-    "unpublish": "vsce unpublish"
+    "----- build / release -----": "",
+    "vsce:build": "vsce package -o dist/",
+    "vsce:login": "vsce login",
+    "vsce:publish": "vsce publish",
+    "vsce:unpublish": "vsce unpublish"
   },
   "contributes": {
     "grammars": [
