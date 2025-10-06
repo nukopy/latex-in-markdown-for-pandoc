@@ -47,19 +47,20 @@ Frontmatter highlight in light theme ([Bold Light (rainglow)](https://vscodethem
 
 ![Frontmatter highlight in light theme](https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/assets/features-highlight-frontmatter-light.png)
 
-### [WIP] Body highlight
+<!-- ### [WIP] Body highlight -->
 
-> [!WARNING]
-> This feature is not implemented yet.
-> Next version will support this feature.
+<!-- > [!NOTE]
+> This feature is WIP.
+> Next version will support this feature. -->
 
-Body highlight in dark theme:
+<!-- Body highlight in dark theme:
 
-![Body highlight in dark theme](./docs/images/features-highlight-body-dark.png)
+![Body highlight in dark theme](https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/assets/features-highlight-body-dark.png)
 
 Body highlight in light theme:
 
-![Body highlight in light theme](./docs/images/features-highlight-body-light.png)
+![Body highlight in light theme](https://latex-in-markdown-for-pandoc.s3.ap-northeast-1.amazonaws.com/assets/features-highlight-body-light.png)
+-->
 
 ## Installation
 
@@ -78,11 +79,11 @@ If you're a Cursor user, you cannot install this extension from the marketplace 
 
 ## Usage
 
-### [WIP] Body highlight
+<!-- ### [WIP] Body highlight -->
 
-> [!WARNING]
+<!-- > [!NOTE]
 > This feature is not implemented yet.
-> Next version will support this feature.
+> Next version will support this feature. -->
 
 <!-- v0.2.0 draft:Once the installation is complete, LaTeX code written in the Markdown body will be highlighted with **no configuration** like [example](#body-highlight). -->
 
