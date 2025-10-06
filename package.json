@@ -46,13 +46,6 @@
         "injectTo": [
           "text.html.markdown"
         ]
-      },
-      {
-        "scopeName": "pandoc-latex-injection-body",
-        "path": "./syntaxes/pandoc-latex-injection-body.tmLanguage.json",
-        "injectTo": [
-          "text.html.markdown"
-        ]
       }
     ],
     "snippets": [
