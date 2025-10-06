@@ -143,9 +143,17 @@ vite.config.ts.timestamp-*
 # for VSCode
 *.code-workspace
 
+# for release
+dist/
+*.vsix
+
 # for local
 resume.md
+tmp/
 
 # 日本語のドキュメントはノイズになるのでコミットしない
 AGENTS.md
 docs/tasks/
+
+# for assets
+*.mov

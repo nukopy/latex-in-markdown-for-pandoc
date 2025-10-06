@@ -1,14 +1,29 @@
 {
-  "name": "latex-highlight-in-pandoc-markdown",
-  "displayName": "latex-highlight-in-pandoc-markdown",
-  "description": "LaTeX highlighting for Markdown front matter, inline math, and block math in Pandoc-flavored documents.",
-  "version": "0.0.1",
+  "name": "latex-in-markdown-for-pandoc",
+  "displayName": "LaTeX in Markdown for Pandoc",
+  "publisher": "nukopy",
+  "description": "Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown documents processed with Pandoc",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.99.0"
   },
+  "icon": "assets/icon.png",
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "LaTeX",
+    "Markdown",
+    "Pandoc",
+    "markdown",
+    "latex",
+    "tex",
+    "pandoc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nukopy/latex-in-markdown-for-pandoc.git"
+  },
   "scripts": {
     "----- format, lint -----": "",
     "format": "biome format --write .",
@@ -16,7 +31,12 @@
     "check": "biome check --write",
     "ci": "biome ci",
     "----- test -----": "",
-    "test": "echo \"No tests yet\""
+    "test": "echo \"No tests yet\"",
+    "----- build / release -----": "",
+    "vsce:build": "vsce package -o dist/",
+    "vsce:login": "vsce login",
+    "vsce:publish": "vsce publish",
+    "vsce:unpublish": "vsce unpublish"
   },
   "contributes": {
     "grammars": [
@@ -26,19 +46,23 @@
         "injectTo": [
           "text.html.markdown"
         ]
+      }
+    ],
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
       },
       {
-        "scopeName": "pandoc-latex-injection-body",
-        "path": "./syntaxes/pandoc-latex-injection-body.tmLanguage.json",
-        "injectTo": [
-          "text.html.markdown"
-        ]
+        "language": "yaml",
+        "path": "./snippets/yaml.json"
       }
     ]
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
     "@types/node": "^24.6.2",
-    "tsx": "^4.20.6"
+    "tsx": "^4.20.6",
+    "vsce": "^2.15.0"
   }
 }

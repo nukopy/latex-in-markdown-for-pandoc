@@ -1,0 +1,353 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{space}{xeCJK}
+\documentclass[
+  10pt,
+  a4paper,
+]{extarticle}
+\usepackage{xcolor}
+\usepackage[top=17.5mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Hack Nerd Font Mono}
+  \setsansfont[]{Hack Nerd Font Mono}
+  \setmonofont[]{Hack Nerd Font Mono}
+  \ifXeTeX
+    \usepackage{xeCJK}
+    \setCJKmainfont[]{Hiragino Sans W3}
+  \fi
+  \ifLuaTeX
+    \usepackage[]{luatexja-fontspec}
+    \setmainjfont[]{Hiragino Sans W3}
+  \fi
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\pagestyle{empty}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{fontawesome5}
+\usepackage{xfp}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+\setlength{\parskip}{0.75em}
+\setstretch{1.25}
+\setlist[itemize]{
+  topsep=\fpeval{-\basefontsize*0.5}pt,
+  partopsep=0pt,
+  parsep=0pt,
+  itemsep=\fpeval{\basefontsize*0.35}pt,
+  after=\vspace{\fpeval{\basefontsize*0.5}pt}
+}
+\definecolor{titleblack}{HTML}{000000}
+\definecolor{sectiongreen}{HTML}{137A63}
+\definecolor{pagebg}{HTML}{F0F0F0}
+\pagecolor{pagebg}
+\newcommand{\basefontsize}{10pt}
+\newcommand{\HeadingOneFont}{\fontsize{\fpeval{\basefontsize*1.50}pt}{\fpeval{\basefontsize*1.50*1.2}pt}\selectfont}
+\newcommand{\HeadingTwoFont}{\fontsize{\fpeval{\basefontsize*1.35}pt}{\fpeval{\basefontsize*1.35*1.2}pt}\selectfont}
+\newcommand{\HeadingThreeFont}{\fontsize{\fpeval{\basefontsize*1.15}pt}{\fpeval{\basefontsize*1.15*1.2}pt}\selectfont}
+\newcommand{\BodyFont}{\fontsize{\fpeval{\basefontsize}pt}{\fpeval{\basefontsize}pt}\selectfont}
+\setlength{\spaceskip}{\fpeval{10pt*0.35}pt plus 0.15pt minus 0.1pt}
+\setlength{\xspaceskip}{\spaceskip}
+\newcommand{\employmenttype}[1]{%
+  {\BodyFont
+  \noindent\makebox[\linewidth]{%
+    \textcolor{black}{#1}\hfill
+  }}\par\vspace{-\fpeval{\basefontsize*0.5}pt}
+}
+\newcommand{\jobmeta}[3]{%
+  {\BodyFont
+  \noindent\makebox[\linewidth][l]{%
+    \hspace{0.5pt}\textcolor{black}{\faIcon[regular]{calendar}}\ #1~-~#2\hfill\textcolor{black}{\faMapMarker*}\ #3%
+  }}\par\vspace{-\fpeval{\basefontsize*0.4}pt}
+}
+\newcommand{\LinkedInBlackIcon}{\raisebox{-0.2em}{\includegraphics[height=0.9em]{./assets/LinkedInBlackLogo.png}}}
+\newcommand{\ZennBlackIcon}{\raisebox{-0.2em}{\includegraphics[height=0.9em]{./assets/ZennBlackLogo.png}}}
+\titleformat{\section}{\color{titleblack}\fontsize{\fpeval{10pt*1.50}pt}{\fpeval{10pt*1.50*1.2}pt}\selectfont\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{*0}{*0.25}
+\titleformat{\subsection}{\color{sectiongreen}\fontsize{\fpeval{10pt*1.35}pt}{\fpeval{10pt*1.35*1.2}pt}\selectfont\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{*1}{*0.25}
+\titleformat{\subsubsection}{\color{black}\fontsize{\fpeval{10pt*1.15}pt}{\fpeval{10pt*1.15*1.2}pt}\selectfont\bfseries}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{*1}{*0.5}
+\AtBeginDocument{\let\originalhref\href\renewcommand{\href}[2]{\originalhref{#1}{\uline{#2}}}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Joke Jordan}\label{joke-jordan}
+
+\faEnvelope~\nolinkurl{joke.jordan@example.com} \textbar{}
+\faGithub~\href{https://example.com}{jokejordan} \textbar{}
+\raisebox{-0.2em}{\includegraphics[height=0.9em]{./assets/LinkedInBlackLogo.png}}~\href{https://example.com}{Joke Jordan}
+\textbar{}
+\raisebox{-0.2em}{\includegraphics[height=0.9em]{./assets/ZennBlackLogo.png}}~\href{https://example.com}{jokejordan}
+
+\subsection{Skills}\label{skills}
+
+\subsubsection{Backend \& Languages}\label{backend-languages}
+
+\begin{itemize}
+\tightlist
+\item
+  Go (standard library first: \texttt{context}, \texttt{net/http},
+  \texttt{database/sql}, generics; profiling with \texttt{pprof})
+\item
+  Rust (\texttt{tokio}, \texttt{axum}, \texttt{tracing}, \texttt{serde};
+  FFI basics with \texttt{cbindgen})
+\item
+  Python (SRE/automation tooling), Bash
+\item
+  SQL (PostgreSQL): indexing, query plans, partitioning, VACUUM/ANALYZE
+  hygiene
+\end{itemize}
+
+\subsubsection{Cloud \& Orchestration}\label{cloud-orchestration}
+
+\begin{itemize}
+\tightlist
+\item
+  AWS (ECS/Fargate, EKS, EC2, ALB/NLB, IAM, VPC, S3, CloudFront,
+  RDS/Aurora)
+\item
+  Containers (Docker/BuildKit, multi-stage builds, OCI, GHCR/ECR)
+\item
+  IaC (Terraform/OpenTofu/Terragrunt, \texttt{tflint}, \texttt{tfsec},
+  drift detection)
+\end{itemize}
+
+\subsubsection{Observability \&
+Reliability}\label{observability-reliability}
+
+\begin{itemize}
+\tightlist
+\item
+  OpenTelemetry (traces/metrics/logs, OTLP exporters, manual +
+  auto-instrumentation)
+\item
+  Observability stack: Prometheus, Grafana, Tempo, Loki, Mimir,
+  CloudWatch
+\item
+  SLO/SLI design, error budgets, incident response; p95/p99 latency
+  tuning
+\item
+  Performance analysis: \texttt{pprof}, eBPF/bcc, flame graphs, Rust
+  \texttt{tracing} spans
+\end{itemize}
+
+\subsubsection{Platform \& Tooling}\label{platform-tooling}
+
+\begin{itemize}
+\tightlist
+\item
+  CI/CD (GitHub Actions, ArgoCD/Flux; canary \& blue-green, progressive
+  delivery)
+\item
+  Security (least-privilege IAM, IRSA, OPA/Gatekeeper, supply chain:
+  SBOM, \texttt{cosign})
+\item
+  Networking (HTTP/2, gRPC, mTLS, service mesh: Istio/Linkerd)
+\end{itemize}
+
+\subsection{Experience}\label{experience}
+
+\subsubsection{Dummy Stub Inc.~- Software
+Engineer}\label{dummy-stub-inc.---software-engineer}
+
+%
+  {\fontsize{\fpeval{10pt}pt}{\fpeval{10pt}pt}\selectfont
+  \noindent\makebox[\linewidth]{%
+    \textcolor{black}{Freelance}\hfill
+  }}\par\vspace{-\fpeval{10pt*0.5}pt}
+
+%
+  {\fontsize{\fpeval{10pt}pt}{\fpeval{10pt}pt}\selectfont
+  \noindent\makebox[\linewidth][l]{%
+    \hspace{0.5pt}\textcolor{black}{\faIcon[regular]{calendar}}\ Jul 2025~-~Present\hfill\textcolor{black}{\faMapMarker*}\ Remote%
+  }}\par\vspace{-\fpeval{10pt*0.4}pt}
+
+Led container platform modernization and observability standardization
+across Go/Rust services. Reduced API p95 latency by \textbf{35\%} for a
+multi-billion-request/month estate.
+
+\begin{itemize}
+\tightlist
+\item
+  Planned ECS (Fargate) → EKS migration; phased stateless workloads
+  first. Split ALB/NLB data paths to increase peak throughput
+  \textbf{1.4×}.
+\item
+  Rolled out OpenTelemetry SDKs (Go/Rust) with Tempo/Loki backends;
+  established service-level traceability and cross-service root cause
+  workflows.
+\item
+  Defined SLOs (availability/latency/error rate) and an error-budget
+  release gate.
+\item
+  Used \texttt{pprof} + eBPF to find CPU hot paths; refactored
+  middleware to zero-alloc, improving p95 by \textbf{35\%}.
+\item
+  Re-structured Terraform monorepo by \texttt{env}/\texttt{region};
+  enforced \texttt{tflint}/\texttt{tfsec} in CI and added drift
+  detection.
+\end{itemize}
+
+\newpage
+
+\subsubsection{Mock Spy Co., Ltd.~- Software
+Engineer}\label{mock-spy-co.-ltd.---software-engineer}
+
+%
+  {\fontsize{\fpeval{10pt}pt}{\fpeval{10pt}pt}\selectfont
+  \noindent\makebox[\linewidth]{%
+    \textcolor{black}{Permanent}\hfill
+  }}\par\vspace{-\fpeval{10pt*0.5}pt}
+
+%
+  {\fontsize{\fpeval{10pt}pt}{\fpeval{10pt}pt}\selectfont
+  \noindent\makebox[\linewidth][l]{%
+    \hspace{0.5pt}\textcolor{black}{\faIcon[regular]{calendar}}\ Apr 2022~-~May 2025\hfill\textcolor{black}{\faMapMarker*}\ Tokyo, Japan | Hybrid%
+  }}\par\vspace{-\fpeval{10pt*0.4}pt}
+
+Owned high-traffic Go microservices and embedded an observability-first
+culture; cut MTTR by \textbf{60\%}.
+
+\begin{itemize}
+\tightlist
+\item
+  Standardized dual-stack APIs (gRPC + JSON). Adopted
+  \texttt{connect-go} for protocol compatibility.
+\item
+  Combined OTel auto-instrumentation with hand-crafted spans to expose
+  N+1 patterns; reduced DB query volume \textbf{40\%}.
+\item
+  Shipped blue-green on ECS with WAF staged rules; auto-rollback via
+  CloudWatch → EventBridge → Lambda.
+\item
+  Built CI matrices (Go/Rust/lint/SBOM) on GitHub Actions; reduced build
+  time \textbf{30\%}.
+\item
+  Re-partitioned Aurora PostgreSQL and redesigned indexes; report query
+  p95 from \textbf{2.1 s → 480 ms}.
+\end{itemize}
+
+\subsubsection{Fake Inc.~- Software
+Engineer}\label{fake-inc.---software-engineer}
+
+%
+  {\fontsize{\fpeval{10pt}pt}{\fpeval{10pt}pt}\selectfont
+  \noindent\makebox[\linewidth]{%
+    \textcolor{black}{Permanent}\hfill
+  }}\par\vspace{-\fpeval{10pt*0.5}pt}
+
+%
+  {\fontsize{\fpeval{10pt}pt}{\fpeval{10pt}pt}\selectfont
+  \noindent\makebox[\linewidth][l]{%
+    \hspace{0.5pt}\textcolor{black}{\faIcon[regular]{calendar}}\ Apr 2018~-~May 2021\hfill\textcolor{black}{\faMapMarker*}\ Kyoto, Japan | Hybrid%
+  }}\par\vspace{-\fpeval{10pt*0.4}pt}
+
+Gradually decomposed a monolith to Go services with operational
+simplicity as a first-class goal.
+
+\begin{itemize}
+\tightlist
+\item
+  Extracted Rails features into Go services behind an API gateway for
+  incremental migration.
+\item
+  Moved logging from CloudWatch Logs to Loki; standardized structured
+  logs with \texttt{trace\_id}/\texttt{span\_id}/\texttt{req\_id}.
+\item
+  Introduced SLOs and on-call runbooks; accelerated first-response and
+  lowered MTTR.
+\item
+  Codified VPC/ALB/RDS with Terraform; eliminated manual changes.
+\end{itemize}
+
+\subsection{Education}\label{education}
+
+\subsubsection{Bachelor of Pharmaceutical
+Sciences}\label{bachelor-of-pharmaceutical-sciences}
+
+Tokyo University of Test Doubles, School of Pharmaceutical Sciences
+
+%
+  {\fontsize{\fpeval{10pt}pt}{\fpeval{10pt}pt}\selectfont
+  \noindent\makebox[\linewidth][l]{%
+    \hspace{0.5pt}\textcolor{black}{\faIcon[regular]{calendar}}\ Apr 2013~-~Mar 2017\hfill\textcolor{black}{\faMapMarker*}\ Chiba, Japan%
+  }}\par\vspace{-\fpeval{10pt*0.4}pt}
+
+\subsection{Certifications}\label{certifications}
+
+\begin{itemize}
+\tightlist
+\item
+  AWS Certified Solutions Architect - Associate (Active)
+\item
+  Applied Information Technology Engineer (Dec 2022)
+\item
+  AtCoder: Rating 914, Green tier (ID: jokejordan)
+\item
+  TOEFL iBT: 81 (Jan 2020)
+\end{itemize}
+
+\subsection{Languages}\label{languages}
+
+\begin{itemize}
+\tightlist
+\item
+  Japanese: Native
+\item
+  English: Business
+\end{itemize}
+
+\subsection{Additional Information}\label{additional-information}
+
+\begin{itemize}
+\tightlist
+\item
+  HHKB enthusiast
+\end{itemize}
+
+\end{document}
