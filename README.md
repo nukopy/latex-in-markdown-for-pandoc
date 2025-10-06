@@ -27,7 +27,15 @@ Visual Studio Code extension that brings LaTeX syntax highlighting to Markdown d
 
 ## Features
 
-LaTeX code in both the Markdown frontmatter and body is highlighted with this extension. **You can keep using your favorite theme.**
+<!-- v0.2.0 draft: LaTeX code in both the Markdown frontmatter and body is highlighted with this extension. **You can keep using your favorite theme.** -->
+
+LaTeX code in the Pandoc-flavoured Markdown frontmatter is highlighted with this extension. **You can keep using your favorite theme.**
+
+Features are as follows:
+
+- **Highlight LaTeX code in Pandoc-flavoured Markdown**
+  - [x] LaTeX code in Markdown frontmatter written in YAML
+  - [ ] [WIP] LaTeX code in Markdown body
 
 ### Frontmatter highlight
 
@@ -39,7 +47,11 @@ Frontmatter highlight in light theme ([Bold Light (rainglow)](https://vscodethem
 
 ![Frontmatter highlight in light theme](./docs/images/features-highlight-frontmatter-light.png)
 
-### Body highlight
+### [WIP] Body highlight
+
+> [!WARNING]
+> This feature is not implemented yet.
+> Next version will support this feature.
 
 Body highlight in dark theme:
 
@@ -60,13 +72,19 @@ If you're a Cursor user, you cannot install this extension from the marketplace 
 1. Install this extension from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=nukopy.latex-in-markdown-for-pandoc).
 2. Create a new Markdown file.
 3. Copy the contents of [quickstart example](./examples/showcase/quickstart/main.md) into your Markdown file.
-4. LaTeX code in the frontmatter and body of your Markdown file will be highlighted.
+4. LaTeX code in the Markdown frontmatter will be highlighted.
+
+<!-- v0.2.0 draft: 4. LaTeX code in the frontmatter and body of your Markdown file will be highlighted. -->
 
 ## Usage
 
-### Body highlight
+### [WIP] Body highlight
 
-Once the installation is complete, LaTeX code written in the Markdown body will be highlighted with **no configuration** like [example](#body-highlight).
+> [!WARNING]
+> This feature is not implemented yet.
+> Next version will support this feature.
+
+<!-- v0.2.0 draft:Once the installation is complete, LaTeX code written in the Markdown body will be highlighted with **no configuration** like [example](#body-highlight). -->
 
 ### Frontmatter highlight
 
@@ -142,8 +160,7 @@ Each example contains a list of files as follows:
 - [Resume with single column layout](./examples/showcase/resume_single_column)
   - This example shows how to write a resume with a single column layout
 - [Statistics - basics of the normal distribution](./examples/showcase/statistics_normal_distribution_basic)
-  - This example shows how to write a statistics topic
-  - This is written in Japanese
+  - This example shows how to write a statistics topic in Japanese
 
 ### Appendix: How to build examples in showcase
 
@@ -208,9 +225,9 @@ Open `main.pdf` in a viewer and `main.tex` in your editor to see the result.
 
 ## Roadmap
 
-- [x] Highlight LaTeX syntax in Markdown
+- [x] Highlight LaTeX code in Pandoc-flavoured Markdown
   - [x] LaTeX in Markdown frontmatter written in YAML
-  - [x] LaTeX in Markdown body
+  - [ ] LaTeX in Markdown body
 - [ ] Extend LSP support to LaTeX code in Markdown (hover documentation and go-to-definition) or LaTeX Workshop integration.
   - [ ] LaTeX in Markdown frontmatter written in YAML
   - [ ] LaTeX in Markdown body
