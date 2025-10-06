@@ -1,0 +1,151 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{space}{xeCJK}
+\documentclass[
+  11pt,
+  a4paper,
+]{extarticle}
+\usepackage{xcolor}
+\usepackage[top=10mm,bottom=15mm,left=22mm,right=22mm]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Hack Nerd Font Mono}
+  \setsansfont[]{Hack Nerd Font Mono}
+  \setmonofont[]{Hack Nerd Font Mono}
+  \ifXeTeX
+    \usepackage{xeCJK}
+    \setCJKmainfont[]{Hiragino Sans W3}
+  \fi
+  \ifLuaTeX
+    \usepackage[]{luatexja-fontspec}
+    \setmainjfont[]{Hiragino Sans W3}
+  \fi
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\pagestyle{plain}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{setspace}
+\setlength{\parskip}{0.75em}
+\setstretch{1.25}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\diff}{\mathrm{d}}
+\numberwithin{equation}{section}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{thm}{定理}
+\newtheorem*{thm*}{定理}
+\theoremstyle{definition}
+\newtheorem{dfn}{定義}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={正規分布の期待値（平均）、分散、標準偏差とその導出},
+  pdfauthor={統計太郎},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{正規分布の期待値（平均）、分散、標準偏差とその導出}
+\author{統計太郎}
+\date{2025-10-06}
+
+\begin{document}
+\maketitle
+
+\subsection{参考}\label{ux53c2ux8003}
+
+本ドキュメントは以下の資料を参考に作成しています。
+
+\begin{itemize}
+\tightlist
+\item
+  Web サイト:
+  \href{https://mathlandscape.com/normal-distrib-ev/}{数学の景色 -
+  正規分布の期待値(平均)・分散・標準偏差とその導出証明}
+\item
+  Web サイト: \href{https://mathlandscape.com/latex-amsthm/}{数学の景色
+  - 【LaTeX】定理環境 amsthm パッケージの使い方を徹底解説}
+\end{itemize}
+
+\tableofcontents
+
+\newpage
+
+\subsection{イントロダクション：正規分布の期待値、分散、標準偏差}\label{ux30a4ux30f3ux30c8ux30edux30c0ux30afux30b7ux30e7ux30f3ux6b63ux898fux5206ux5e03ux306eux671fux5f85ux5024ux5206ux6563ux6a19ux6e96ux504fux5dee}
+
+平均 \mu \in \mathbb{R}、分散 \sigma\^{}2 \textgreater{} 0
+をもつ正規分布 X \sim N(\mu, \sigma\^{}2) の確率密度関数は、
+
+p(x) = \frac{1}{\sqrt{2\pi \sigma^2}}
+\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+
+となります。このとき、期待値、分散、標準偏差はそれぞれ次のとおりとなります。
+
+\mathbb{E}[X] = \mu, \qquad \mathrm{Var}(X) = \sigma\^{}2,
+\qquad \sqrt{\mathrm{Var}(X)} = \sigma.
+
+以下では、正規分布の定義から期待値、分散、標準偏差を導出する方法を紹介します。
+
+\subsection{正規分布の定義\#\#
+正規分布の定義}\label{ux6b63ux898fux5206ux5e03ux306eux5b9aux7fa9-ux6b63ux898fux5206ux5e03ux306eux5b9aux7fa9}
+
+まず、正規分布の確率密度関数の定義を確認します。
+
+\$\$
+
+\begin{dfn}
+
+X を確率変数、\mu \in \mathbb{R}、\sigma > 0 とする。
+
+平均 \mu \in \mathbb{R}、分散 \sigma^2 > 0 をもつ正規分布 X \sim N(\mu, \sigma^2) の確率密度関数は
+
+p(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+
+\end{dfn}
+
+\$\$
+
+\subsection{証明}\label{ux8a3cux660e}
+
+\subsection{正規分布の分散の導出:
+定義から直接証明する方法}\label{ux6b63ux898fux5206ux5e03ux306eux5206ux6563ux306eux5c0eux51fa-ux5b9aux7fa9ux304bux3089ux76f4ux63a5ux8a3cux660eux3059ux308bux65b9ux6cd5}
+
+\subsection{正規分布の標準偏差について}\label{ux6b63ux898fux5206ux5e03ux306eux6a19ux6e96ux504fux5deeux306bux3064ux3044ux3066}
+
+\end{document}
