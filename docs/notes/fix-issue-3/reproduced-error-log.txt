@@ -1,0 +1,360 @@
+workbench.desktop.main.js:55   ERR Maximum call stack size exceeded: RangeError: Maximum call stack size exceeded
+    at vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-oniguruma/release/onig.wasm:wasm-function[203]:0x25f60
+    at vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-oniguruma/release/onig.wasm:wasm-function[104]:0x1b76f
+    at vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-oniguruma/release/onig.wasm:wasm-function[198]:0x25853
+    at u._findNextMatchSync (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-oniguruma/release/main.js:1:3646)
+    at u.findNextMatchSync (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-oniguruma/release/main.js:1:3451)
+    at g.findNextMatchSync (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:49537)
+    at vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20378
+    at vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20822
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:21623)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017)
+    at p (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:25039)
+    at y (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:22596)
+    at c (vscode-file://vscode-app/Applications/Cursor.app/Contents/Resources/app/node_modules/vscode-textmate/release/main.js:1:20017) RangeError: Maximum call stack size exceeded
+    at onig.wasm:0x25f60
+    at onig.wasm:0x1b76f
+    at onig.wasm:0x25853
+    at u._findNextMatchSync (main.js:1:3646)
+    at u.findNextMatchSync (main.js:1:3451)
+    at g.findNextMatchSync (main.js:1:49537)
+    at main.js:1:20378
+    at main.js:1:20822
+    at y (main.js:1:21623)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+    at p (main.js:1:25039)
+    at y (main.js:1:22596)
+    at c (main.js:1:20017)
+error @ workbench.desktop.main.js:55
+error @ workbench.desktop.main.js:55
+error @ workbench.desktop.main.js:9349
+handleUnexpectedError @ workbench.desktop.main.js:9346
+(anonymous) @ workbench.desktop.main.js:9346
+onUnexpectedError @ workbench.desktop.main.js:27
+ca @ workbench.desktop.main.js:22
+
+001c7aca:0x25f60 Uncaught (in promise) RangeError: Maximum call stack size exceeded
+    at 001c7aca:0x25f60
+    at 001c7aca:0x1b76f
+    at 001c7aca:0x25853
+    at u._findNextMatchSync (main.js:1:3646)
+    at u.findNextMatchSync (main.js:1:3451)
+    at g.findNextMatchSync (main.js:1:49537)
+    at main.js:1:20378
+    at main.js:1:20822
+    at y (main.js:1:21623)
+    at c (main.js:1:20017)
+$func203 @ 001c7aca:0x25f60
+$func104 @ 001c7aca:0x1b76f
+$findNextOnigScannerMatch @ 001c7aca:0x25853
+_findNextMatchSync @ main.js:1
+findNextMatchSync @ main.js:1
+findNextMatchSync @ main.js:1
+(anonymous) @ main.js:1
+(anonymous) @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+y @ main.js:1
+c @ main.js:1
+p @ main.js:1
+await in p
+_resetTokenization @ textMateTokenizationWorker.workerMain.js:37
+await in _resetTokenization
+vo @ textMateTokenizationWorker.workerMain.js:37
+$acceptNewModel @ textMateTokenizationWorker.workerMain.js:37
+_handleMessage @ textMateTokenizationWorker.workerMain.js:37
+handleMessage @ textMateTokenizationWorker.workerMain.js:37
+_handleRequestMessage @ textMateTokenizationWorker.workerMain.js:37
+_handleMessage @ textMateTokenizationWorker.workerMain.js:37
+handleMessage @ textMateTokenizationWorker.workerMain.js:37
+onmessage @ textMateTokenizationWorker.workerMain.js:37
+Oo.globalThis.onmessage @ textMateTokenizationWorker.workerMain.js:37
