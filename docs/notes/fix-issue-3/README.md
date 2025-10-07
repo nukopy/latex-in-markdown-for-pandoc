@@ -89,6 +89,6 @@ The error is like this:
 
 ![screenshot of reproduced error](./images/screenshot-reproduced-error.png)
 
-## Solution
+## Testing
 
 TODO:
