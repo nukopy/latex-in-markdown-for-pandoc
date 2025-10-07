@@ -1,186 +1,186 @@
 {
-    "scopeName": "pandoc-latex-injection-frontmatter",
-    "injectionSelector": "L:meta.embedded.block.frontmatter",
-    "patterns": [
-        {
-            "include": "#latex-injection"
-        }
-    ],
-    "repository": {
-        "latex-injection": {
-            "name": "meta.embedded.block.frontmatter.pandoc-latex-injection",
-            "begin": "(# ----- pandoc-latex-begin -----)",
-            "beginCaptures": {
-                "1": {
-                    "name": "punctuation.definition.comment.begin.pandoc-latex-injection"
-                }
-            },
-            "end": "(# ----- pandoc-latex-end -----)",
-            "endCaptures": {
-                "1": {
-                    "name": "punctuation.definition.comment.end.pandoc-latex-injection"
-                }
-            },
-            "patterns": [
-                {
-                    "include": "#pandoc-yaml-block-scalars"
-                },
-                {
-                    "include": "#pandoc-yaml-keywords"
-                },
-                {
-                    "include": "text.tex.latex"
-                },
-                {
-                    "include": "source.yaml"
-                }
-            ]
-        },
-        "pandoc-yaml-block-scalars": {
-            "patterns": [
-                {
-                    "name": "meta.embedded.block-scalar.yaml",
-                    "comment": "Detects YAML list items that begin a block scalar (| or >) and treats their contents as LaTeX.",
-                    "begin": "^(\\s*)(-\\s*)(\\|[+-]?|>[+-]?)(?:\\s+#.*)?\\s*$",
-                    "beginCaptures": {
-                        "1": {
-                            "name": "meta.indentation.yaml",
-                            "comment": "Leading indentation (spaces or tabs)"
-                        },
-                        "2": {
-                            "name": "punctuation.definition.list-item.yaml",
-                            "comment": "Dash (-) of a YAML list item and its following space"
-                        },
-                        "3": {
-                            "name": "punctuation.definition.block-scalar.yaml",
-                            "comment": "Block scalar indicator (| or >) including optional + / - chomping indicators"
-                        }
-                    },
-                    "while": "^(?:(?=\\1\\s{2,})|\\s*$)",
-                    "whileCaptures": {
-                        "0": {
-                            "name": "meta.embedded.block-scalar.line.yaml",
-                            "comment": "Lines inside the block scalar body (same indent + at least 2 more spaces)"
-                        }
-                    },
-                    "patterns": [
-                        {
-                            "include": "text.tex.latex",
-                            "comment": "Delegate parsing of block content to the LaTeX grammar if available"
-                        }
-                    ]
-                }
-            ]
-        },
-        "----- pandoc-yaml-keywords -----": "",
-        "pandoc-yaml-keywords": {
-            "patterns": [
-                {
-                    "include": "#metadata-variables"
-                },
-                {
-                    "include": "#language-variables"
-                },
-                {
-                    "include": "#variables-for-html"
-                },
-                {
-                    "include": "#variables-for-html-math"
-                },
-                {
-                    "include": "#variables-for-html-slides"
-                },
-                {
-                    "include": "#variables-for-beamer-slides"
-                },
-                {
-                    "include": "#variables-for-powerpoint"
-                },
-                {
-                    "include": "#variables-for-latex"
-                },
-                {
-                    "include": "#variables-for-context"
-                },
-                {
-                    "include": "#variables-for-wkhtmltopdf"
-                },
-                {
-                    "include": "#variables-for-man-pages"
-                },
-                {
-                    "include": "#variables-for-texinfo"
-                },
-                {
-                    "include": "#variables-for-typst"
-                },
-                {
-                    "include": "#variables-for-ms"
-                },
-                {
-                    "include": "#variables-set-automatically"
-                }
-            ]
-        },
-        "metadata-variables": {
-            "name": "keyword.pandoc.variables.metadata-variables",
-            "match": "\\b(?:title|subtitle|author|date|abstract|toc|toc-title|toc-depth|include-in-header|include-before|include-before-body|include-after|include-after-body)\\b"
-        },
-        "language-variables": {
-            "name": "keyword.pandoc.variables.language-variables",
-            "match": "\\b(?:lang|dir|otherlangs|date|time|title|subtitle)\\b"
-        },
-        "variables-for-html": {
-            "name": "keyword.pandoc.variables.variables-for-html",
-            "match": "\\b(?:css|include-before|include-after|mathjax|mathml|html-q-tags)\\b"
-        },
-        "variables-for-html-math": {
-            "name": "keyword.pandoc.variables.variables-for-html-math",
-            "match": "\\b(?:mathjax|mathjaxurl|mathjaxconfig|katex|katex-css|katex-js)\\b"
-        },
-        "variables-for-html-slides": {
-            "name": "keyword.pandoc.variables.variables-for-html-slides",
-            "match": "\\b(?:slide-level|incremental|revealjs-url|theme|transition|highlightjs)\\b"
-        },
-        "variables-for-beamer-slides": {
-            "name": "keyword.pandoc.variables.variables-for-beamer-slides",
-            "match": "\\b(?:theme|themesoption|colorheme|fonttheme|section-titles|navigation|short-title)\\b"
-        },
-        "variables-for-powerpoint": {
-            "name": "keyword.pandoc.variables.variables-for-powerpoint",
-            "match": "\\b(?:reference-doc|slide-level|incremental|page-size|page-number)\\b"
-        },
-        "variables-for-latex": {
-            "name": "keyword.pandoc.variables.variables-for-latex",
-            "match": "\\b(?:documentclass|classoption|geometry|papersize|pagestyle|secnumdepth|linestretch|hyperrefoptions|indent|fontenc|fontfamily|fontfamilyoptions|fontfamilyfallback|mainfont|mainfontoptions|mainfontfallback|sansfont|sansfontoptions|sansfontfallback|monofont|monofontoptions|monofontfallback|mathfont|mathfontoptions|mathfontfallback|CJKmainfont|CJKmainfontoptions|CJKmainfontfallback|header-includes|include-in-header|include-before|include-after)\\b"
-        },
-        "variables-for-context": {
-            "name": "keyword.pandoc.variables.variables-for-context",
-            "match": "\\b(?:context|context-variables|mode)\\b"
-        },
-        "variables-for-wkhtmltopdf": {
-            "name": "keyword.pandoc.variables.variables-for-wkhtmltopdf",
-            "match": "\\b(?:title|margin-left|margin-right|margin-top|margin-bottom|header|footer)\\b"
-        },
-        "variables-for-man-pages": {
-            "name": "keyword.pandoc.variables.variables-for-man-pages",
-            "match": "\\b(?:title|section|header|footer|date|manual|source)\\b"
-        },
-        "variables-for-texinfo": {
-            "name": "keyword.pandoc.variables.variables-for-texinfo",
-            "match": "\\b(?:documentlanguage|paragraphindent|fillcolumn|shorttitlepage|contents|node-files)\\b"
-        },
-        "variables-for-typst": {
-            "name": "keyword.pandoc.variables.variables-for-typst",
-            "match": "\\b(?:theme|pagestyle|font|fontsize)\\b"
-        },
-        "variables-for-ms": {
-            "name": "keyword.pandoc.variables.variables-for-ms",
-            "match": "\\b(?:title|author|date|abstract|keywords)\\b"
-        },
-        "variables-set-automatically": {
-            "name": "keyword.pandoc.variables.variables-set-automatically",
-            "match": "\\b(?:body|abstract|toc|bibliography|links|header-includes|include-before|include-after)\\b"
-        }
+  "scopeName": "pandoc-latex-injection-frontmatter",
+  "injectionSelector": "L:meta.embedded.block.frontmatter",
+  "patterns": [
+    {
+      "include": "#latex-injection"
     }
+  ],
+  "repository": {
+    "latex-injection": {
+      "name": "meta.embedded.block.frontmatter.pandoc-latex-injection",
+      "begin": "(# ----- pandoc-latex-begin -----)",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.comment.begin.pandoc-latex-injection"
+        }
+      },
+      "end": "(# ----- pandoc-latex-end -----)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.comment.end.pandoc-latex-injection"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#pandoc-yaml-block-scalars"
+        },
+        {
+          "include": "#pandoc-yaml-keywords"
+        },
+        {
+          "include": "text.tex.latex"
+        },
+        {
+          "include": "source.yaml"
+        }
+      ]
+    },
+    "pandoc-yaml-block-scalars": {
+      "patterns": [
+        {
+          "name": "meta.embedded.block-scalar.yaml",
+          "comment": "Detects YAML list items that begin a block scalar (| or >) and treats their contents as LaTeX.",
+          "begin": "^(\\s*)(-\\s*)(\\|[+-]?|>[+-]?)(?:\\s+#.*)?\\s*$",
+          "beginCaptures": {
+            "1": {
+              "name": "meta.indentation.yaml",
+              "comment": "Leading indentation (spaces or tabs)"
+            },
+            "2": {
+              "name": "punctuation.definition.list-item.yaml",
+              "comment": "Dash (-) of a YAML list item and its following space"
+            },
+            "3": {
+              "name": "punctuation.definition.block-scalar.yaml",
+              "comment": "Block scalar indicator (| or >) including optional + / - chomping indicators"
+            }
+          },
+          "while": "^(?:(?=\\1\\s{2,})|\\s*$)",
+          "whileCaptures": {
+            "0": {
+              "name": "meta.embedded.block-scalar.line.yaml",
+              "comment": "Lines inside the block scalar body (same indent + at least 2 more spaces)"
+            }
+          },
+          "patterns": [
+            {
+              "include": "text.tex.latex",
+              "comment": "Delegate parsing of block content to the LaTeX grammar if available"
+            }
+          ]
+        }
+      ]
+    },
+    "----- pandoc-yaml-keywords -----": "",
+    "pandoc-yaml-keywords": {
+      "patterns": [
+        {
+          "include": "#metadata-variables"
+        },
+        {
+          "include": "#language-variables"
+        },
+        {
+          "include": "#variables-for-html"
+        },
+        {
+          "include": "#variables-for-html-math"
+        },
+        {
+          "include": "#variables-for-html-slides"
+        },
+        {
+          "include": "#variables-for-beamer-slides"
+        },
+        {
+          "include": "#variables-for-powerpoint"
+        },
+        {
+          "include": "#variables-for-latex"
+        },
+        {
+          "include": "#variables-for-context"
+        },
+        {
+          "include": "#variables-for-wkhtmltopdf"
+        },
+        {
+          "include": "#variables-for-man-pages"
+        },
+        {
+          "include": "#variables-for-texinfo"
+        },
+        {
+          "include": "#variables-for-typst"
+        },
+        {
+          "include": "#variables-for-ms"
+        },
+        {
+          "include": "#variables-set-automatically"
+        }
+      ]
+    },
+    "metadata-variables": {
+      "name": "keyword.pandoc.variables.metadata-variables",
+      "match": "\\b(?:title|subtitle|author|date|abstract|toc|toc-title|toc-depth|include-in-header|include-before|include-before-body|include-after|include-after-body)\\b"
+    },
+    "language-variables": {
+      "name": "keyword.pandoc.variables.language-variables",
+      "match": "\\b(?:lang|dir|otherlangs|date|time|title|subtitle)\\b"
+    },
+    "variables-for-html": {
+      "name": "keyword.pandoc.variables.variables-for-html",
+      "match": "\\b(?:css|include-before|include-after|mathjax|mathml|html-q-tags)\\b"
+    },
+    "variables-for-html-math": {
+      "name": "keyword.pandoc.variables.variables-for-html-math",
+      "match": "\\b(?:mathjax|mathjaxurl|mathjaxconfig|katex|katex-css|katex-js)\\b"
+    },
+    "variables-for-html-slides": {
+      "name": "keyword.pandoc.variables.variables-for-html-slides",
+      "match": "\\b(?:slide-level|incremental|revealjs-url|theme|transition|highlightjs)\\b"
+    },
+    "variables-for-beamer-slides": {
+      "name": "keyword.pandoc.variables.variables-for-beamer-slides",
+      "match": "\\b(?:theme|themesoption|colorheme|fonttheme|section-titles|navigation|short-title)\\b"
+    },
+    "variables-for-powerpoint": {
+      "name": "keyword.pandoc.variables.variables-for-powerpoint",
+      "match": "\\b(?:reference-doc|slide-level|incremental|page-size|page-number)\\b"
+    },
+    "variables-for-latex": {
+      "name": "keyword.pandoc.variables.variables-for-latex",
+      "match": "\\b(?:documentclass|classoption|geometry|papersize|pagestyle|secnumdepth|linestretch|hyperrefoptions|indent|fontenc|fontfamily|fontfamilyoptions|fontfamilyfallback|mainfont|mainfontoptions|mainfontfallback|sansfont|sansfontoptions|sansfontfallback|monofont|monofontoptions|monofontfallback|mathfont|mathfontoptions|mathfontfallback|CJKmainfont|CJKmainfontoptions|CJKmainfontfallback|header-includes|include-in-header|include-before|include-after)\\b"
+    },
+    "variables-for-context": {
+      "name": "keyword.pandoc.variables.variables-for-context",
+      "match": "\\b(?:context|context-variables|mode)\\b"
+    },
+    "variables-for-wkhtmltopdf": {
+      "name": "keyword.pandoc.variables.variables-for-wkhtmltopdf",
+      "match": "\\b(?:title|margin-left|margin-right|margin-top|margin-bottom|header|footer)\\b"
+    },
+    "variables-for-man-pages": {
+      "name": "keyword.pandoc.variables.variables-for-man-pages",
+      "match": "\\b(?:title|section|header|footer|date|manual|source)\\b"
+    },
+    "variables-for-texinfo": {
+      "name": "keyword.pandoc.variables.variables-for-texinfo",
+      "match": "\\b(?:documentlanguage|paragraphindent|fillcolumn|shorttitlepage|contents|node-files)\\b"
+    },
+    "variables-for-typst": {
+      "name": "keyword.pandoc.variables.variables-for-typst",
+      "match": "\\b(?:theme|pagestyle|font|fontsize)\\b"
+    },
+    "variables-for-ms": {
+      "name": "keyword.pandoc.variables.variables-for-ms",
+      "match": "\\b(?:title|author|date|abstract|keywords)\\b"
+    },
+    "variables-set-automatically": {
+      "name": "keyword.pandoc.variables.variables-set-automatically",
+      "match": "\\b(?:body|abstract|toc|bibliography|links|header-includes|include-before|include-after)\\b"
+    }
+  }
 }

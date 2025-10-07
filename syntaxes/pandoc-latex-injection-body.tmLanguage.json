@@ -1,19 +1,19 @@
 {
-    "scopeName": "pandoc-latex-injection-body",
-    "injectionSelector": "L:meta.paragraph.markdown",
-    "patterns": [
-        {
-            "include": "#latex-injection"
-        }
-    ],
-    "repository": {
-        "latex-injection": {
-            "name": "meta.embedded.block.body.pandoc-latex-injection",
-            "patterns": [
-                {
-                    "include": "text.tex.latex"
-                }
-            ]
-        }
+  "scopeName": "pandoc-latex-injection-body",
+  "injectionSelector": "L:meta.paragraph.markdown",
+  "patterns": [
+    {
+      "include": "#latex-injection"
     }
+  ],
+  "repository": {
+    "latex-injection": {
+      "name": "meta.embedded.block.body.pandoc-latex-injection",
+      "patterns": [
+        {
+          "include": "text.tex.latex"
+        }
+      ]
+    }
+  }
 }
