@@ -1,19 +1,3 @@
-# Variables
-MARKDOWNLINT ?= npx markdownlint-cli2
-MARKDOWNLINT_CONFIG ?= .markdownlint-cli2.yml
-
-# ------------------------------------------------------------
-# linting, formatting
-# ------------------------------------------------------------
-
-.PHONY: lint-md fmt-md
-
-lint-md:
-	$(MARKDOWNLINT) --config .markdownlint-cli2.yml
-
-fmt-md:
-	$(MARKDOWNLINT) --config --fix
-
 # ------------------------------------------------------------
 # pandoc build for E2E testing
 # ------------------------------------------------------------
