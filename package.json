@@ -34,7 +34,7 @@
     "ci": "biome ci",
     "----- test -----": "",
     "update-grammars": "tsx scripts/update-test-fixtures-grammars.ts",
-    "test": "echo \"No tests yet\"",
+    "test": "vscode-tmgrammar-test --config=./tests/fixtures/package.test.json ./tests/testcases/*.md",
     "----- build / release -----": "",
     "vsce:build": "vsce package -o dist/",
     "vsce:login": "vsce login",
