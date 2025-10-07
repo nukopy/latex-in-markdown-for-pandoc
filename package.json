@@ -70,6 +70,7 @@
     "@biomejs/biome": "^2.2.5",
     "@types/node": "^24.6.2",
     "tsx": "^4.20.6",
-    "vsce": "^2.15.0"
+    "vsce": "^2.15.0",
+    "vscode-tmgrammar-test": "^0.1.3"
   }
 }
