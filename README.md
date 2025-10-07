@@ -257,6 +257,35 @@ pnpm i
 
 Now, you can start developing the extension.
 
+### Test
+
+In this extension, we use [vscode-tmgrammar-test](https://github.com/PanAeon/vscode-tmgrammar-test) to test the syntax highlighting.
+
+- Run all tests
+
+```sh
+pnpm run test
+```
+
+- Run tests for a specific file
+
+```sh
+pnpm exec vscode-tmgrammar-test --config=./tests/fixtures/package.test.json ./path/to/testfile.md
+
+# run specific grammar
+# TODO
+
+# help
+pnpm exec vscode-tmgrammar-test --help
+```
+
+- Update test fixtures of TextMate syntaxes
+  - This command downloads TextMate syntaxes from the latest version of [VSCode repository](https://github.com/microsoft/vscode/tree/main/extensions) and updates the test fixtures in the `tests/fixtures/syntaxes` directory.
+
+```sh
+pnpm run update-grammars
+```
+
 ### Build
 
 ```sh
