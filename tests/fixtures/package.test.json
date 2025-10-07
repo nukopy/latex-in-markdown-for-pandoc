@@ -1,0 +1,314 @@
+{
+  "name": "latex-in-markdown-for-pandoc.test",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "pandoc-latex-injection-frontmatter",
+        "path": "../../syntaxes/pandoc-latex-injection-frontmatter.tmLanguage.json",
+        "injectTo": ["text.html.markdown"]
+      },
+      {
+        "scopeName": "pandoc-latex-injection-body",
+        "path": "../../syntaxes/pandoc-latex-injection-body.tmLanguage.json",
+        "injectTo": ["text.html.markdown"]
+      },
+      {
+        "scopeName": "text.tex.latex",
+        "path": "./syntaxes/text.tex.latex.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.html.markdown",
+        "path": "./syntaxes/text.html.markdown.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.html.basic",
+        "path": "./syntaxes/text.html.basic.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.asymptote",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.cpp.embedded.latex",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.dot",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.gnuplot",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.haskell",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.java",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.julia",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.lua",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.python",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.scala",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.tex.internal_only_markdown_latex_combined",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.tex",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.asy",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.shell",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.css",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.js",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.ruby",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.rust",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.ts",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.xml",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.yaml",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.html.derivative",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.ini",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.makefile",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.perl",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.r",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.php",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.sql",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.asp.vb.net",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.xml.xsl",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.batchfile",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.clojure",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.coffee",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.c",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.cpp",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.diff",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.dockerfile",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.git-commit",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.git-rebase",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.go",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.groovy",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.pug",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.js.regexp",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.json",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.json.comments",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.css.less",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.objc",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.swift",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.css.scss",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.perl.6",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.powershell",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.regexp.python",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.tsx",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.cs",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.fsharp",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.dart",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.html.handlebars",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.log",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.erlang",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.elixir",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.bibtex",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.twig",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.ignore",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.json.lines",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.yang",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.abap",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "source.rst",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      },
+      {
+        "scopeName": "text.tex.markdown_latex_combined",
+        "path": "./syntaxes/dummy.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      },
+      {
+        "language": "yaml",
+        "path": "./snippets/yaml.json"
+      }
+    ]
+  }
+}

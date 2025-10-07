@@ -27,11 +27,14 @@
   "scripts": {
     "----- format, lint -----": "",
     "format": "biome format --write .",
+    "format:md": "markdownlint-cli2 --config .markdownlint-cli2.yaml --fix **/*.md",
     "lint": "biome lint --write .",
+    "lint:md": "markdownlint-cli2 --config .markdownlint-cli2.yaml **/*.md",
     "check": "biome check --write",
     "ci": "biome ci",
     "----- test -----": "",
-    "test": "echo \"No tests yet\"",
+    "update-grammars": "tsx scripts/update-test-fixtures-grammars.ts",
+    "test": "vscode-tmgrammar-test --config=./tests/fixtures/package.test.json ./tests/testcases/*.md",
     "----- build / release -----": "",
     "vsce:build": "vsce package -o dist/",
     "vsce:login": "vsce login",
@@ -43,6 +46,13 @@
       {
         "scopeName": "pandoc-latex-injection-frontmatter",
         "path": "./syntaxes/pandoc-latex-injection-frontmatter.tmLanguage.json",
+        "injectTo": [
+          "text.html.markdown"
+        ]
+      },
+      {
+        "scopeName": "pandoc-latex-injection-body",
+        "path": "./syntaxes/pandoc-latex-injection-body.tmLanguage.json",
         "injectTo": [
           "text.html.markdown"
         ]
@@ -62,7 +72,9 @@
   "devDependencies": {
     "@biomejs/biome": "^2.2.5",
     "@types/node": "^24.6.2",
+    "markdownlint-cli2": "^0.18.1",
     "tsx": "^4.20.6",
-    "vsce": "^2.15.0"
+    "vsce": "^2.15.0",
+    "vscode-tmgrammar-test": "^0.1.3"
   }
 }

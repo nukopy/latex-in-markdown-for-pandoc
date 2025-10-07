@@ -1,0 +1,26 @@
+>---
+#^^^^ text.html.markdown meta.separator.markdown
+># ----- pandoc-latex-begin -----
+#^ text.html.markdown markup.heading.markdown heading.1.markdown punctuation.definition.heading.markdown
+# ^ text.html.markdown markup.heading.markdown heading.1.markdown
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.markdown markup.heading.markdown heading.1.markdown entity.name.section.markdown
+>
+>header-includes:
+#^^^^^^^^^^^^^^^^^ text.html.markdown meta.paragraph.markdown
+>  - \usepackage{amsmath}
+#^^ text.html.markdown markup.list.unnumbered.markdown
+#  ^ text.html.markdown markup.list.unnumbered.markdown punctuation.definition.list.begin.markdown
+#   ^ text.html.markdown markup.list.unnumbered.markdown
+#    ^ text.html.markdown markup.list.unnumbered.markdown meta.paragraph.markdown meta.preamble.latex keyword.control.preamble.latex punctuation.definition.function.latex
+#     ^^^^^^^^^^ text.html.markdown markup.list.unnumbered.markdown meta.paragraph.markdown meta.preamble.latex keyword.control.preamble.latex
+#               ^ text.html.markdown markup.list.unnumbered.markdown meta.paragraph.markdown meta.preamble.latex punctuation.definition.arguments.begin.latex
+#                ^^^^^^^ text.html.markdown markup.list.unnumbered.markdown meta.paragraph.markdown meta.preamble.latex support.class.latex
+#                       ^ text.html.markdown markup.list.unnumbered.markdown meta.paragraph.markdown meta.preamble.latex punctuation.definition.arguments.end.latex
+>
+># ----- pandoc-latex-end -----
+#^ text.html.markdown markup.heading.markdown heading.1.markdown punctuation.definition.heading.markdown
+# ^ text.html.markdown markup.heading.markdown heading.1.markdown
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ text.html.markdown markup.heading.markdown heading.1.markdown entity.name.section.markdown
+>---
+#^^^^ text.html.markdown meta.separator.markdown
+>
